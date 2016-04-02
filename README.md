@@ -147,6 +147,7 @@ An IIFE is an immediately-invoked function expression. In other words, it's a fu
 What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
+'ui-sref' is a directive of ui.router. It functions a lot like link_to does in rails. It's a helper to add in the appropriate url for a previously defined state. By using it, you can change the router paths without having to go back into your html and fix all the paths.
 
 > ...
 
