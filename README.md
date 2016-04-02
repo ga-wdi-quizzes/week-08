@@ -156,7 +156,7 @@ What is the `ui-sref` directive, and how is it used?
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
 **Your answer:**
-
+Line 3 throws an error because i was not defined with the var token. Use strict is very picky and requires every variable to be defined with var.
 > ...
 
 ```js
