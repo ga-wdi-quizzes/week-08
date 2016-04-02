@@ -50,7 +50,7 @@ Which *one* of the following buttons would *not* be displayed?
 
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
-[ ] B: <button data-ng-show="status">Click</button>
+[X] B: <button data-ng-show="status">Click</button>
 [ ] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
@@ -65,7 +65,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 ```
 
 **Your answer:**
-
+In terms of what the user sees and how the code performs, there is no difference. However, ng-click is angular code and not html code, so it will result in an invalid message in an html code validator. To avoid that, we place data in front (data-ng-click) so the validator knows to ignore the angular commands.
 > ...
 
 ## Question 4
