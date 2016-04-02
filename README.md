@@ -131,7 +131,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> 'ui-sref' is used to link to another state in our app. 'sref' checks whether a state exists, and if it does, it returns the URL for that state. Ex. <a data-ui-sref="songIndex">Songs</a>
 
 ## Question 8
 
@@ -139,7 +139,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> Because 'strict mode' is enabled, all variables must be defined with 'var'. Line 3 will throw an error because 'i' is not defined with 'var'.
 
 ```js
 /*1*/ "use strict";
@@ -167,7 +167,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> I initially thought the answer was [A], because it sorts by type and demonstrates separation of concerns. I found through google that it might get more difficult to find files if it is a large app. I think the answer is [B], because it sorts by feature (e.g. artist), so all controllers, views, directives, etc. can all be found together for that particular feature.
 
 
 ### A:
