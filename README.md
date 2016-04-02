@@ -127,7 +127,7 @@ Imagine an app in which a change to the view updates the model without a page re
 Which one of the following concepts does this best illustrate?
 
 ```
-[ ] A: Modularity
+[X] A: Modularity
 [ ] B: MVC
 [ ] C: Two-way data-binding
 [ ] D: Separation of concerns
@@ -138,6 +138,7 @@ Which one of the following concepts does this best illustrate?
 What is an IIFE, and why might you use it?
 
 **Your answer:**
+An IIFE is an immediately-invoked function expression. In other words, it's a function that is called as soon as it's defined. You would use it in situations where you have code needed to run, but don't want global variables floating around. In an IIFE, any variables declared inside are limited to that inside scope.
 
 > ...
 
