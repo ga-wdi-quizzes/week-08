@@ -60,7 +60,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> [A] - 'ng-app' is used to instantiate an instance of the module. It is inserted in an html tag and it tells Angular that the app should run inside that tag element.
 
 ### A:
 ```html
@@ -113,7 +113,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -123,7 +123,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> An IIFE is an immediately invoked function expression. It is a function that is called as soon as it is defined. Because any variables defined inside an IIFE only exist within that IIFE, it won't pollute the global scope.
 
 ## Question 7
 
