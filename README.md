@@ -176,6 +176,11 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
+restrict: 'E' example
+<my-directive></my-directive>
+
+restrict: 'C' example
+<div class="my-directive"></div>
 
 ```
 
@@ -184,6 +189,7 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
+Option B is the most correct way of organizing an angular app. According to John Papa's angular style guide, we should create folders based on the feature they represent. In this way, "A developer can locate the code, identify what each file represents at a glance, the structure is flat as can be, and there is no repetitive nor redundant names." It is strongly discouraged to organize by type like in Option A.
 
 > ...
 
