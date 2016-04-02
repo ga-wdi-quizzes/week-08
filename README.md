@@ -15,6 +15,13 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 **Your answer:**
 ```js
 
+(function(){
+  angular
+  .module("BlogPost", [
+    "ui.router"
+  ])
+
+}());
 ```
 
 ## Question 2
@@ -31,7 +38,7 @@ Which *one* of the following buttons would *not* be displayed?
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
 [ ] C: <button data-ng-hide="status">Click</button>
-[ ] D: <button>{{status}}</button>
+[X] D: <button>{{status}}</button>
 ```
 
 ## Question 3
@@ -44,7 +51,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 ```
 
 **Your answer:**
-
+The one with `data-` in front will pass an HTML validator.
 > ...
 
 ## Question 4
@@ -52,7 +59,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 **Your answer:**
-
+The placement of `ng-app` defines the scope that Angular has access to, so there is very little functional difference between the first two options. I would personally be inclined to put it in the <html> because the documentation on bootstrapping Angular recommends it (https://docs.angularjs.org/guide/bootstrap), though the documentation on ngApp says either is fine. But you never know when you might want Angular to change the <title>! (that's (mostly) a joke)  
 > ...
 
 ### A:
@@ -72,7 +79,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +93,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +113,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -115,7 +122,7 @@ Which one of the following concepts does this best illustrate?
 What is an IIFE, and why might you use it?
 
 **Your answer:**
-
+An IIFE is an immediately invoked function expression. A good use of one is to put your Angular app in it so as to protect the global namespace.
 > ...
 
 ## Question 7
@@ -123,7 +130,7 @@ What is an IIFE, and why might you use it?
 What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
-
+`ui-sref` is Angular's way of binding a link to a state. Clicking a link in a `ui-sref` will trigger a state change.   
 > ...
 
 ## Question 8
@@ -131,7 +138,7 @@ What is the `ui-sref` directive, and how is it used?
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
 **Your answer:**
-
+I believe the use of "use strict" will cause JavaScript to barf when it sees that variable declaration in line 3 (talkin' 'bout `i`). "Use strict" just says no to globally scoped variables.
 > ...
 
 ```js
@@ -151,7 +158,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+<my-directive></my-directive>
+<div class="my-directive"></div>
 ```
 
 ## Question 10
@@ -159,7 +167,7 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
-
+John Papa recommends option B (http://www.johnpapa.net/angular-app-structuring-guidelines/) because you don't have to switch between folders when working on a particular feature. He says option A "isn't horrible" but it's a little more cumbersome than option A. Option C is just crazy 'cuz there isn't much point to making a folder for one file.
 > ...
 
 
@@ -212,4 +220,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
