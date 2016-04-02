@@ -74,6 +74,8 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
+Example A is the best usage of ng-app. By placing it in the html tag, it is easy to find and is applied to the entire site.
+
 > ...
 
 ### A:
