@@ -14,6 +14,14 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
+"use strict";
+
+(function(){
+  angular
+  .module("blogPost", [
+    "ui.router",
+  ])
+}());
 
 ```
 
@@ -29,8 +37,8 @@ Which *one* of the following buttons would *not* be displayed?
 
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
-[ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[] B: <button data-ng-show="status">Click</button>
+[x] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -43,7 +51,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 <button data-ng-click="create()">Click</button>
 ```
 
-**Your answer:**
+It has no difference in terms of functionality, but the 'data' is there to make the HTML validated when interpreted by the browser.
 
 > ...
 
@@ -53,7 +61,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+A is the best use of 'ng-app', this way the 'ng-app' is in the parent element that encapsulates all other angular directives like 'data-ui-sref'.
 
 ### A:
 ```html
@@ -72,7 +80,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +94,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +114,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +124,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+An IIFE stands for an Immediately-invoked function expression. This is important to use in angular to make sure directives are performed as soon they are defined and then not repeated.
 
 ## Question 7
 
@@ -124,7 +132,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+This directive makes an element on a page into a hyperlink, and is good for linking between different views.
 
 ## Question 8
 
@@ -145,12 +153,19 @@ One of the lines of code in the following snippet will throw an error. Which one
 /*8*/ }
 ```
 
+Line three will throw an error since the variable i is not called with a 'var' declaration when it is initially defined due to the 'strict' application of JS.
+
 ## Question 9
 
 Custom directives can be embedded in HTML four different ways. Demonstrate **two** of these four with a directive called `my-directive`. (Hint: "MACE")
 
 **Your answer:**
 ```html
+class:
+<div class='my-custom-directive'></div>
+
+comment:
+<!-- directive:my-custom-directive -->
 
 ```
 
@@ -160,7 +175,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+B is the most "correct" way of organizing these files. Since templates and their controllers are closely linked this facilitates navigation between files, as they are automatically adjacent to each other given alphabetical sorting.
 
 
 ### A:
@@ -212,4 +227,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
