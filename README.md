@@ -14,6 +14,13 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
+"use strict";
+(function(){
+  angular
+  .module("BlogPost",[
+    "ui.router"
+  ])
+})()
 
 ```
 
@@ -30,7 +37,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[ x] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -45,7 +52,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> ...one without data will create error during html validation.
 
 ## Question 4
 
@@ -53,7 +60,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> ... Option A because when the myapp module is used on the html tag myapp is available on the entire document as opposed to head which means its only available in the head tag.
 
 ### A:
 ```html
@@ -72,7 +79,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +93,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +113,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[ x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +123,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> ...Immediately Invoked Function Expression is used to immediately call that Function once declared.   
 
 ## Question 7
 
@@ -124,7 +131,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> ...ui-sref directive is used in place of href so that the url is not hardcoded and so that the destination url can be shown dynamically if edited.
 
 ## Question 8
 
@@ -132,7 +139,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> ...line 3, it needs to say i < max.length
 
 ```js
 /*1*/ "use strict";
@@ -151,7 +158,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+<div my-directive> </div>
+<div id="my-directive"></div>
 ```
 
 ## Question 10
@@ -160,7 +168,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> ... B, beacuse thats how atom organizes it and i like it. js and html are put together making is easier to access it.
 
 
 ### A:
@@ -212,4 +220,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
