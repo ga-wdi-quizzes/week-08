@@ -156,6 +156,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
+#restrict: 'C' <div class='my-directive'></div>
+#restrict: 'E' <my-directive></my-directive>
 
 ```
 
@@ -165,7 +167,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> Example C is much more organized than the others. In terms of hierarchy I can easily see that the JS and HTML files are separated into master folders. Within each master folder there are also subfolders that easily identify what kind of files are stored within them.
 
 
 ### A:
