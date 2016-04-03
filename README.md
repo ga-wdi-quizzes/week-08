@@ -14,7 +14,7 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
-
+"use strict";
 (function(){
   angular
   .module("BlogPost",[
@@ -113,7 +113,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[ x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -123,7 +123,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> ...Immediately Invoked Function Expression is used to immediately call that Function once declared.   
 
 ## Question 7
 
@@ -131,7 +131,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> ...ui-sref directive is used in place of href so that the url is not hardcoded and so that the destination url can be shown dynamically if edited.
 
 ## Question 8
 
@@ -139,7 +139,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> ...line 3, it needs to say i < max.length
 
 ```js
 /*1*/ "use strict";
@@ -158,7 +158,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+<div my-directive> </div>
+<div id="my-directive"></div>
 ```
 
 ## Question 10
@@ -167,7 +168,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> ... B, beacuse thats how atom organizes it and i like it. js and html are put together making is easier to access it.
 
 
 ### A:
