@@ -54,16 +54,16 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 ```
 
 **Your answer:**
-The second one, which contains "data" will be able to run through an html validator without errors.
-> ...
+
+> The second one, which contains "data" will be able to run through an html validator without errors.
 
 ## Question 4
 
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 **Your answer:**
-It depends on how many angular apps will be used for the whole application, since some large-scale sites are comprised of multiple, separate angular apps.  If multiple angular apps are in play, it might make sense to put in a div.  Smaller web apps, and most that we are building in class should go in the html-tag.  Putting data-ng-app in the head tag is the least right option.
-> ...
+
+> It depends on how many angular apps will be used for the whole application, since some large-scale sites are comprised of multiple, separate angular apps.  If multiple angular apps are in play, it might make sense to put in a div.  Smaller web apps, and most that we are building in class should go in the html-tag.  Putting data-ng-app in the head tag is the least right option.
 
 ### A:
 ```html
@@ -125,16 +125,16 @@ Which one of the following concepts does this best illustrate?
 What is an IIFE, and why might you use it?
 
 **Your answer:**
-Immediately invoked function expression.  You would use an IIFE when you are an instantiating a new angular module, because you want to protect the global scope.
-> ...
+
+> Immediately invoked function expression.  You would use an IIFE when you are an instantiating a new angular module, because you want to protect the global scope.
 
 ## Question 7
 
 What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
-ui-sref binds a link with a state.  You could use it if you wanted to loop through a list and make each of the items in the list a link.
-> ...
+
+> ui-sref binds a link with a state.  You could use it if you wanted to loop through a list and make each of the items in the list a link.
 
 ## Question 8
 
@@ -142,9 +142,9 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-Line 3.  It should be 'var = i'
 
-> ...
+> Line 3.  It should be 'var = i'
+
 
 ```js
 /*1*/ "use strict";
