@@ -14,7 +14,12 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
-
+(function(){
+  angular
+  .module("BlogPost", [
+    "ui.router"
+  ])
+})();
 ```
 
 ## Question 2
@@ -72,7 +77,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +91,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -212,4 +217,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
