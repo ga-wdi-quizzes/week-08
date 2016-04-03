@@ -37,7 +37,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[X] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -52,7 +52,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> The first one would not validate in the HTML validator whereas the second one does validate in HTML validator. The function of both buttons is the same.
 
 ## Question 4
 
@@ -60,7 +60,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> The first one has the best usage of "ng-app". The "ng-app" should be attached to the html element of the html document. 
 
 ### A:
 ```html
