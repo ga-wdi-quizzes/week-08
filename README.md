@@ -15,6 +15,15 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 **Your answer:**
 ```js
 
+"use strict";
+
+(function(){
+  angular
+  .module("BlogPost", [
+    "ui.router"
+  ])
+})();
+
 ```
 
 ## Question 2
@@ -30,7 +39,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[X ] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -44,7 +53,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 ```
 
 **Your answer:**
-
+The one that says data-ng-click will validate in an HTML validator the other one will not. Otherwise, there is no difference.
 > ...
 
 ## Question 4
@@ -52,7 +61,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 **Your answer:**
-
+I would say C has the best usage because one website can have multiple modules so I can attach multiple modules in different divs. If I apply the ng-model to the html tag I can't really add anymore modules to my page.
 > ...
 
 ### A:
@@ -72,7 +81,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +95,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +115,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[ X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -115,7 +124,7 @@ Which one of the following concepts does this best illustrate?
 What is an IIFE, and why might you use it?
 
 **Your answer:**
-
+An IIFE is an Immediately Invoked Function Expression. You would want to use this whenever you write "use strict" in Javascript because "use strict" prevents you from using global variables. If all of your variables are inside an IIFE statement you shouldn't get an error anymore.
 > ...
 
 ## Question 7
@@ -123,7 +132,7 @@ What is an IIFE, and why might you use it?
 What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
-
+ui-sref is what binds a state to an <a> tag. The S in sref refers to "state". When you use sref for linking to another page your site doesn't have to reload. However, when you use href, your page will reload.
 > ...
 
 ## Question 8
@@ -131,7 +140,7 @@ What is the `ui-sref` directive, and how is it used?
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
 **Your answer:**
-
+ #2 will throw an error because it's a global variable. When using "use strict" in Javascript, you can't have global variables.
 > ...
 
 ```js
@@ -152,6 +161,12 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 **Your answer:**
 ```html
 
+restrict: 'C'
+<div class='my-directive'></div>
+
+restrict 'M'
+<!-- this is my-directive -->
+
 ```
 
 ## Question 10
@@ -159,7 +174,7 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
-
+I would go with B because according to John Papa, because according to him all related assets should be moved into one folder (artists or songs). In option A, all of the items are divided by type (directives, views, controllers). This is okay but it would lead to constant switching between folders. Option C separates the files into too many unnecessary folders.
 > ...
 
 
@@ -212,4 +227,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
