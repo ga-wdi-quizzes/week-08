@@ -59,7 +59,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 **Your answer:**
-A, because the html tag is a valid place to place ng-app, whereas the head is not, and in answer C, the app needs to be defined before the ui-sref directive, as it depends on the ui.router injection in the app.
+A, because the html tag is a reasonable place to put ng-app – it's the outter wrapper, so inheritance works as intended – placing it in the head tag would mean that directives could only be used in the head, which doesn't make much sense. In answer C, the app needs to be defined in a tag that wraps around the ui-sref directive, as it depends on the ui.router injection in the app.
 > ...
 
 ### A:
@@ -171,7 +171,7 @@ As custom directives can be embedded as a comment, attribute, class or element, 
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
-B is considered the 'better' way currently, as the convention is to organize files by the model they refer to, rather than by the type of file.
+B is considered the 'better' way currently, as the convention is to organize files by the model they refer to, rather than by the type of file. 
 > ...
 
 
