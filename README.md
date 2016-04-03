@@ -37,7 +37,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[X] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -52,7 +52,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> There is no difference functionally. We use the 'data' prepend so that our HTML validation doesn't throw any errors.
 
 ## Question 4
 
@@ -60,7 +60,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> A: ng-app is referring to where we are placing our application so that child html elements can inherit those associated angular properties/attributes. It makes the most sense for us to put this at the "top" of our html, so right in the html tag is no problem.
 
 ### A:
 ```html
@@ -113,7 +113,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -123,7 +123,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> Immediately Invoked Function Expression; a function that invokes itself. This allows us to enter in all our angular functionality (modules, controllers, states, any variables, etc) that we require in our app without having to cloud the global scope.
 
 ## Question 7
 
@@ -131,7 +131,9 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> This is an angular link to a 'state'. For instance, if I wanted to link each individual item on an index page to its show page I may do something like this:
+<h2 data-ui-sref="itemShow({id: item.id})">{{item.name}}</h2>
+^ which would then take me to the show page if my state for 'show' is set up properly.
 
 ## Question 8
 
@@ -139,7 +141,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> Line 3: 'i' isn't defined at this point.
 
 ```js
 /*1*/ "use strict";
@@ -158,6 +160,12 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
+<!--if we've set up a custom directive with restrict: "E":-->
+<my-new-directive></my-new-directive>
+
+<!-- with restrict: "C"-->
+<div class="my-new-directive"></div>
+
 
 ```
 
@@ -167,7 +175,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> B is the one I recognize. Organizationally, our js files sit right next to the html files so it's easy to see and makes the code easier to reference one another since they're in the same directory.
 
 
 ### A:
