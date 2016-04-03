@@ -60,7 +60,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> The first one has the best usage of "ng-app". The "ng-app" should be attached to the html element of the html document. 
+> The first one has the best usage of "ng-app". The "ng-app" should be attached to the html element of the html document.
 
 ### A:
 ```html
@@ -113,7 +113,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -123,7 +123,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> IIFE stands for "immediately invoked function expression". Variables in an iife are called only once, and do not exist outside of the function. IIFE's help keep the global scope lean and easier to manage/ understand. 
 
 ## Question 7
 
@@ -131,7 +131,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> The ui-sref directive links different states of a web application in angular, the s stands for states. The directives changes which views you are seeing in an app (new, show, index, etc.)
 
 ## Question 8
 
