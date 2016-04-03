@@ -13,8 +13,13 @@
 Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a dependency. Use Angular code style conventions.
 
 **Your answer:**
-```js
-
+```
+(function(){
+  angular
+  .module('BlogPost', [
+    'ui.router'
+  ]);
+  }());
 ```
 
 ## Question 2
@@ -30,8 +35,8 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
-[ ] D: <button>{{status}}</button>
+[x] C: <button data-ng-hide="status">Click</button>
+[] D: <button>{{status}}</button>
 ```
 
 ## Question 3
@@ -44,15 +49,18 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 ```
 
 **Your answer:**
-
-> ...
+```
+using 'data' in front of ng-click will allow one to use angular directives and keep
+the html validator compliant.
+```
 
 ## Question 4
 
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 **Your answer:**
-
+A. is the best usage because the app can be implemented all over the page instead
+of the just between the head tags or one div element.  
 > ...
 
 ### A:
@@ -72,7 +80,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +94,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +114,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -115,7 +123,12 @@ Which one of the following concepts does this best illustrate?
 What is an IIFE, and why might you use it?
 
 **Your answer:**
-
+```
+An IIFE is an immediately invoked function expression.  It's function that runs
+as soon as it is defined.  You might use one to keep variables from cluttering the
+global scope of your program and making sure there aren't problems with variables
+when the code is minified.
+```
 > ...
 
 ## Question 7
@@ -123,7 +136,9 @@ What is an IIFE, and why might you use it?
 What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
-
+```
+'ui-sref' is a directive that is part of the ui-router Angular module.  It binds
+an html tag to a state
 > ...
 
 ## Question 8
@@ -134,7 +149,10 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 > ...
 
-```js
+```
+Line three throws the error.  I needs to be defined explicitly using the var
+keyword.
+
 /*1*/ "use strict";
 /*2*/ var max = 100;
 /*3*/ for(i = 1; i < max; i++){
@@ -150,7 +168,12 @@ One of the lines of code in the following snippet will throw an error. Which one
 Custom directives can be embedded in HTML four different ways. Demonstrate **two** of these four with a directive called `my-directive`. (Hint: "MACE")
 
 **Your answer:**
-```html
+```
+'A' as an attribute:
+<div class='my-directive'></div>
+
+'E' as an elemente:
+<my-directive></my-directive>
 
 ```
 
@@ -159,7 +182,10 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
-
+```
+Option 'B' would be better because the file and directory names are descriptive and
+allow for the ability to quickly find, view, and access files that are linked
+by dependencies or features/functionality.
 > ...
 
 
@@ -212,4 +238,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
