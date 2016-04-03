@@ -176,8 +176,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
-B - it groups all modules together so that you can see what is included in each.
-> ...
+
+> B - it groups all modules together so that you can see what is included in each.
 
 
 ### A:
