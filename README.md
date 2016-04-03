@@ -58,7 +58,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> Example A. This is the best usage since applying the directive to the html tag will encompass the entire page rather than just a particular sections as with the other examples.
+> Example A. This is the best usage since applying the directive to the html tag will encompass the entire page rather than a particular section as with the other examples.
 
 ### A:
 ```html
