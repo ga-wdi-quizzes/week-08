@@ -143,7 +143,8 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> A little confused. My first instinct would say line 1 because "use strict" has always thrown an error via jshint. But I think because of "use strict", most of the other lines will through an error. line 3 does not define i, lines 4-6 use == instead of ===, and I am surprised 4-6 don't need {} after if, else if, and else.
+But jshint aside I would say line 3 because i does not have var in front of it. 
 
 ```js
 /*1*/ "use strict";
@@ -172,7 +173,7 @@ Of the three following options, which is the most "correct" way of organizing th
 **Your answer:**
 
 > I choose B. For every controller there is a view which can be seen in B. B also allows things to be seen in alphabetical order. Lastly it divided everything by concerns of model, so you can see everything that involves artists in one folder and everything that involves songs in another.
-If none of this is convincing, than I would choose B purely because visually it looks better organized. 
+If none of this is convincing, than I would choose B purely because visually it looks better organized.
 
 
 ### A:
