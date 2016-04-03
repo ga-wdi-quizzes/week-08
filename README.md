@@ -41,6 +41,10 @@ Which *one* of the following buttons would *not* be displayed?
 [ ] D: <button>{{status}}</button>
 ```
 
+```text
+I had trouble with #2.
+```
+
 ## Question 3
 
 One button below has an `ng-click` attribute; the other has `data-ng-click` instead. What difference does it make?
@@ -52,7 +56,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> The `data-ng-click` enables the HTML to properly validate. The `data` tells the validator that `ng-click` is not a typical HTML tag and can be ingored.
+> The `data-ng-click` enables the HTML to properly validate. The `data` tells the validator that `ng-click` is not a typical HTML tag and can be ignored.
 
 ## Question 4
 
@@ -60,7 +64,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> *A* demonstrates the best usage of `ng-app` because it allows directives to be properly used within the HTML. It is declared on the outer <html> wrapper, so ng directives can be used anywhere inside the <html> opening and closing tags. Option B would not work because directives could only be used in the head tag, and C is incorrect because the `ng-app` is called 1) after the `data-ui-sref` and 2) in a div that is not wrapped around the `data-ui-sref`, both making `data-ui-sref` invalid.
 
 ### A:
 ```html
@@ -113,7 +117,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -123,7 +127,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> IIFE stands for `Immediately Invoked Function Expression`, meaning that after the function is declared, it is immediately called. It is also used to protect the global scope from getting polluted with global variables and to protect the variables that are within the IIFE from being used in other functions outside of the IIFE.
 
 ## Question 7
 
