@@ -186,6 +186,7 @@ Of the three following options, which is the most "correct" way of organizing th
 Option 'B' would be better because the file and directory names are descriptive and
 allow for the ability to quickly find, view, and access files that are linked
 by dependencies or features/functionality.
+```
 > ...
 
 
