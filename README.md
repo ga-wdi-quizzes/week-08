@@ -58,7 +58,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> Example A. This is the best usage since applying the directive to the html tag will encompass the entire page rather than just a particular sections as with the other examples.
 
 ### A:
 ```html
@@ -111,7 +111,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -121,7 +121,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> An IIFE (immediately-invoked function expression) is used to prevent a bunch of global variables from being defined within an angular app.
 
 ## Question 7
 
