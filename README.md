@@ -135,7 +135,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> `ui-sref` is a drective that binds a link to a declared state. For example, say you declared a `.state("songIndex", { url: "/songs"})` in your router. Rather than hard coding the link to /songs in your <a> tags, you can write `<a data-ui-sref="songIndex">Songs</a>` and it will bring you to the songs index page. This allows for dynamic updates in your views should you want to edit your songIndex url in the future.
 
 ## Question 8
 
@@ -143,7 +143,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> Line 2: var max = 100 will cause an error because it is a global variable in strict mode. If the line "use strict" was omitted, the global variable would not throw an error.
 
 ```js
 /*1*/ "use strict";
@@ -162,7 +162,10 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+<!--my-directive-->
+<div my-directive></div>
+<div class="my-directive"></div>
+<my-directive></my-directive>
 ```
 
 ## Question 10
@@ -171,7 +174,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> B is the most correct way of organizing the files because it separates the files based on their corresponding model (songs and artists). So all of the controllers, views, and directives for songs is in the songs folder and of the controllers, views, and directives for artists is in the artists folder. With option A, it could be easy to accidentally be in a view for artists rather than a view for songs because they are in the same folder. Option C would make linking the files to one another more difficult since corresponding files are in separate folders.
 
 
 ### A:
