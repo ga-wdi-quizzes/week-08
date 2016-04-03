@@ -123,7 +123,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> IIFE stands for "immediately invoked function expression". Variables in an iife are called only once, and do not exist outside of the function. IIFE's help keep the global scope lean and easier to manage/ understand. 
+> IIFE stands for "immediately invoked function expression". Variables in an iife are called only once, and do not exist outside of the function. IIFE's help keep the global scope lean and easier to manage/ understand.
 
 ## Question 7
 
@@ -139,7 +139,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> line 3 throws an error. when you use "use strict" at the beginning, each variable must be clearly defined with var because the variables will not exist otherwise. Therefore, line 3 will throw an error because the variable 'i' is not defined with var, whereas the variable 'max' is labeled 'var max= 100'
 
 ```js
 /*1*/ "use strict";
@@ -158,7 +158,9 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
+<div data-my-directive></div>
 
+<my-directive></my-directive>
 ```
 
 ## Question 10
@@ -167,8 +169,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
-
+> B is the best way of organizing an angular application. Angular applications require many files, and B is organized in an easy to read an use way-- all the files necessary for artists are together (html, controller,  js, etc. ) all the necessary files for songs are together, too. Options A and C are not as easy to navigate. For instance, A does not have separate folders for artists and songs. Both A and C are just more confusing and messy.
 
 ### A:
 ```
