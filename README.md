@@ -14,7 +14,12 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
-
+(function(){
+  angular
+  .module("BlogPost", [
+    "ui.router"
+  ])
+})();
 ```
 
 ## Question 2
@@ -30,7 +35,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[x] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -45,7 +50,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> using the word "data" will allow the html to be passed through a validator otherwise it might throw an error.
 
 ## Question 4
 
@@ -53,7 +58,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> Example A. This is the best usage since applying the directive to the html tag will encompass the entire page rather than a particular section as with the other examples.
 
 ### A:
 ```html
@@ -72,7 +77,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +91,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +111,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +121,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> An IIFE (immediately-invoked function expression) is used to prevent a bunch of global variables from being defined within an angular app.
 
 ## Question 7
 
@@ -124,7 +129,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> The ui-sref directive binds a link ('a'tag) to a state. It checks whether or not a state exists, and if it does, it returns the URL for it. The params id can also be added to the URL and ui-sref will still provide the correct URL.
 
 ## Question 8
 
@@ -132,7 +137,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> Line 3 should throw an error because there is no variable defined for 'i'.
 
 ```js
 /*1*/ "use strict";
@@ -151,6 +156,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
+#restrict: 'C' <div class='my-directive'></div>
+#restrict: 'E' <my-directive></my-directive>
 
 ```
 
@@ -160,7 +167,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> Example C is much more organized than the others. In terms of hierarchy I can easily see that the JS and HTML files are separated into master folders. Within each master folder there are also subfolders that easily identify what kind of files are stored within them.
 
 
 ### A:
@@ -212,4 +219,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
