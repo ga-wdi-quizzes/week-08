@@ -30,7 +30,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[ X ] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -39,8 +39,9 @@ Which *one* of the following buttons would *not* be displayed?
 One button below has an `ng-click` attribute; the other has `data-ng-click` instead. What difference does it make?
 
 ```html
-<button ng-click="create()">Click</button>
-<button data-ng-click="create()">Click</button>
+<button ng-click="create()">Click</button> is an angular expression which evaluates a context of an angular scope which bounds the element that holds the ng-click attribute or ancestor of the element but it is not valid HTML.
+
+<button data-ng-click="create()">Click</button> Click</button> can pass some data as an argument to a method that is invoked by pressing on the button but is valid HTML.
 ```
 
 **Your answer:**
@@ -52,7 +53,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 **Your answer:**
-
+Example A is the best usage of 'ng-app' because the data-ng-app is defining the name of the app and is a valid HTML for the entire Angular directives.
 > ...
 
 ### A:
@@ -72,7 +73,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +87,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +107,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[ X ] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -115,7 +116,7 @@ Which one of the following concepts does this best illustrate?
 What is an IIFE, and why might you use it?
 
 **Your answer:**
-
+An IIFE is an immediately-invoked function expression used as a javascript design patternto produce a lexical scope by usin a javascript function. It might be used to prevent global variables.
 > ...
 
 ## Question 7
@@ -123,7 +124,10 @@ What is an IIFE, and why might you use it?
 What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
+the ui-sref directive is used for a directive in module that binds a link to a state.
+ex.
 
+<a ui-sref="cake">Cake</a>
 > ...
 
 ## Question 8
@@ -131,7 +135,7 @@ What is the `ui-sref` directive, and how is it used?
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
 **Your answer:**
-
+Use strict prevents you from variables.
 > ...
 
 ```js
@@ -159,7 +163,7 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
-
+Example B is most correct because it contains all the files associated with creating a basic Angular app such as the js folder, artist folder, and songs folder.
 > ...
 
 
@@ -212,4 +216,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
