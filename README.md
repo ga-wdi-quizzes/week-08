@@ -14,6 +14,13 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
+"use strict";
+(function(){
+  angular
+  .module("BlogPost", [
+    "ui.router"
+  ])
+}())
 
 ```
 
@@ -30,8 +37,12 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[X] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
+```
+
+```text
+I had trouble with #2.
 ```
 
 ## Question 3
@@ -45,7 +56,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> The `data-ng-click` enables the HTML to properly validate. The `data` tells the validator that `ng-click` is not a typical HTML tag and can be ignored.
 
 ## Question 4
 
@@ -53,7 +64,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> *A* demonstrates the best usage of `ng-app` because it allows directives to be properly used within the HTML. It is declared on the outer <html> wrapper, so ng directives can be used anywhere inside the <html> opening and closing tags. Option B would not work because directives could only be used in the head tag, and C is incorrect because the `ng-app` is called 1) after the `data-ui-sref` and 2) in a div that is not wrapped around the `data-ui-sref`, both making `data-ui-sref` invalid.
 
 ### A:
 ```html
@@ -72,7 +83,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +97,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +117,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +127,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> IIFE stands for `Immediately Invoked Function Expression`, meaning that after the function is declared, it is immediately called. It is also used to protect the global scope from getting polluted with global variables and to protect the variables that are within the IIFE from being used in other functions outside of the IIFE.
 
 ## Question 7
 
@@ -124,7 +135,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> `ui-sref` is a drective that binds a link to a declared state. For example, say you declared a `.state("songIndex", { url: "/songs"})` in your router. Rather than hard coding the link to /songs in your <a> tags, you can write `<a data-ui-sref="songIndex">Songs</a>` and it will bring you to the songs index page. This allows for dynamic updates in your views should you want to edit your songIndex url in the future.
 
 ## Question 8
 
@@ -132,7 +143,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> Line 2: var max = 100 will cause an error because it is a global variable in strict mode. If the line "use strict" was omitted, the global variable would not throw an error.
 
 ```js
 /*1*/ "use strict";
@@ -151,7 +162,10 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+<!--my-directive-->
+<div my-directive></div>
+<div class="my-directive"></div>
+<my-directive></my-directive>
 ```
 
 ## Question 10
@@ -160,7 +174,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> B is the most correct way of organizing the files because it separates the files based on their corresponding model (songs and artists). So all of the controllers, views, and directives for songs is in the songs folder and of the controllers, views, and directives for artists is in the artists folder. With option A, it could be easy to accidentally be in a view for artists rather than a view for songs because they are in the same folder. Option C would make linking the files to one another more difficult since corresponding files are in separate folders.
 
 
 ### A:
@@ -212,4 +226,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
