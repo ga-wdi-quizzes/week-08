@@ -129,7 +129,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> The ui-sref directive binds a link ('<a>' tag) to a state. It checks whether or not a state exists, and if it does, it returns the URL for it. The params id can also be added to the URL and ui-sref will still provide the correct URL.
+> The ui-sref directive binds a link ('a'tag) to a state. It checks whether or not a state exists, and if it does, it returns the URL for it. The params id can also be added to the URL and ui-sref will still provide the correct URL.
 
 ## Question 8
 
