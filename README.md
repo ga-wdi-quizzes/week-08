@@ -14,7 +14,12 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
-
+(function(){
+  angular
+  .module("BlogPost", [
+    "ui.router"
+  ]);
+}());
 ```
 
 ## Question 2
@@ -38,13 +43,12 @@ Which *one* of the following buttons would *not* be displayed?
 
 One button below has an `ng-click` attribute; the other has `data-ng-click` instead. What difference does it make?
 
+**Your answer:**
 ```html
 <button ng-click="create()">Click</button> is an angular expression which evaluates a context of an angular scope which bounds the element that holds the ng-click attribute or ancestor of the element but it is not valid HTML.
 
 <button data-ng-click="create()">Click</button> Click</button> can pass some data as an argument to a method that is invoked by pressing on the button but is valid HTML.
 ```
-
-**Your answer:**
 
 > ...
 
