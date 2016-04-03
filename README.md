@@ -15,6 +15,13 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 **Your answer:**
 ```js
 
+(function(){
+  angular
+  .module("BlogPost",[
+    "ui.router"
+  ])
+})()
+
 ```
 
 ## Question 2
@@ -30,7 +37,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[ x] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -45,7 +52,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> ...one without data will create error during html validation.
 
 ## Question 4
 
@@ -53,7 +60,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> ... Option A because when the myapp module is used on the html tag myapp is available on the entire document as opposed to head which means its only available in the head tag.
 
 ### A:
 ```html
@@ -72,7 +79,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +93,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -212,4 +219,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
