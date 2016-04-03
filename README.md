@@ -38,7 +38,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[X] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -144,7 +144,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 **Your answer:**
 
 > A little confused. My first instinct would say line 1 because "use strict" has always thrown an error via jshint. But I think because of "use strict", most of the other lines will through an error. line 3 does not define i, lines 4-6 use == instead of ===, and I am surprised 4-6 don't need {} after if, else if, and else.
-But jshint aside I would say line 3 because i does not have var in front of it. 
+But jshint aside I would say line 3 because i does not have var in front of it.
 
 ```js
 /*1*/ "use strict";
@@ -163,7 +163,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+<my-directive></my-directive>
+<h3 my-directive></h3>
 ```
 
 ## Question 10
