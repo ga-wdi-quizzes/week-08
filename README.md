@@ -15,6 +15,11 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 **Your answer:**
 ```js
 
+angular
+.module("BlogPost" , [
+  "ui.router"
+]);
+
 ```
 
 ## Question 2
@@ -31,7 +36,7 @@ Which *one* of the following buttons would *not* be displayed?
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
 [ ] C: <button data-ng-hide="status">Click</button>
-[ ] D: <button>{{status}}</button>
+[ x ] D: <button>{{status}}</button>
 ```
 
 ## Question 3
@@ -47,6 +52,10 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 > ...
 
+data-ng-click runs fine in HTML validator
+ng-click will not validate it
+both work perfectly fine though
+
 ## Question 4
 
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
@@ -54,6 +63,8 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 **Your answer:**
 
 > ...
+
+answer a. it places it on the entire html file, normally you place controllers on the body and divs but you never place ng custom directives on the head.
 
 ### A:
 ```html
@@ -72,7 +83,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +97,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +117,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[ x ] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -115,7 +126,8 @@ Which one of the following concepts does this best illustrate?
 What is an IIFE, and why might you use it?
 
 **Your answer:**
-
+an iife is a function that runs automatically runs when the script loads it does
+not need to be called on. We use it save space for memory in javascript.
 > ...
 
 ## Question 7
@@ -123,6 +135,8 @@ What is an IIFE, and why might you use it?
 What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
+
+it is the link tag for contollers in angular. you place the controller name in the sref
 
 > ...
 
@@ -133,7 +147,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 **Your answer:**
 
 > ...
-
+the if else statements seem to be off and need curly brackets for console.logs.
 ```js
 /*1*/ "use strict";
 /*2*/ var max = 100;
@@ -151,6 +165,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
+<div class = "quiezzzz" ng-controller="my-directive"></div>
+<html data-ng-app="my-directive"></html>
 
 ```
 
@@ -161,7 +177,7 @@ Of the three following options, which is the most "correct" way of organizing th
 **Your answer:**
 
 > ...
-
+A seems the most semantic to me. controllers and directives are always js files so they do not belong in views and all the views are inside their own folder. Even if b and c was the best way to organize I would probably have a workflow like A.
 
 ### A:
 ```
@@ -212,4 +228,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
