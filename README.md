@@ -15,6 +15,15 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 **Your answer:**
 ```js
 
+"use strict";
+
+(function(){
+  angular
+    .module( "BlogPost", [
+      "ui.router"
+    ]);
+}());
+
 ```
 
 ## Question 2
@@ -30,7 +39,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[X] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -45,7 +54,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> Prepending `data` to the `ng-click` directive will ensure that the HTML will still validate, despite the fact that a non-standard HTML attribute is included within the tag (namely the Angular directive, `ng-click`). Both buttons will function in exactly the same way, but only the second one will validate.
 
 ## Question 4
 
@@ -53,7 +62,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> "A" demonstrates the best usage of `ng-app` because the `<html>` element constitutes the most logical root element for the Angular app, `myapp`. The `<head>` tag includes a `<title>` title tag indicating that the entire HTML page is part of `myapp`, meaning that the `ng-app` directive should not be on the `<body>` tag, for example. The problem with "B" is the fact that the root element is the `<head>` tag; thus, the `ng-sref` attribute on the `<h1>` tag in the body of the document will not be recognized as part of the Angular app. In "C", the Angular app only exists within the `div` that is a child of the `<body>` tag. As is the case in "B," the `ng-sref` attribute on the `<h1>` tag will not be recognized as part of `myapp`. Anything that is part of the Angular app needs to be a child of the root element of that app.
 
 ### A:
 ```html
@@ -72,7 +81,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +95,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -212,4 +221,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
