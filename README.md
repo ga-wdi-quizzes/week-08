@@ -12,6 +12,7 @@
 
 Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a dependency. Use Angular code style conventions.
 
+
 **Your answer:**
 ```js
 
