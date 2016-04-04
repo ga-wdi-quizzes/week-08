@@ -13,7 +13,7 @@
 Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a dependency. Use Angular code style conventions.
 
 
-```
+```js
 (function(){
   angular
   .module("BlogPost", [
@@ -142,7 +142,7 @@ sref stands for state. When using "ui-sref", it checks to see if the state exist
 
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
-**Your answer:**
+Line #2 because if it not defining a function. 
 
 > ...
 
@@ -182,8 +182,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 According to John Papa, the `Folders-by-Feature` structure is the best method for organizing your angular app. This structure is suppose to make it easier for a developer to locate code & identify what each file represents. This structure is flat and helps reduce repetitive and redundant file names.  
 
-Based on John's styleguide, option A would be best. It is folders are assigned by controllers, directives and then views. 
-
+Based on John's styleguide, option A would be best. It is folders are assigned by controllers, directives and then views.
 > ...
 
 
