@@ -141,7 +141,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> Line 3 will throw an error indicating that the variable `i` is undefined. In order to correct this issue, you would need to edit line 3 as follows: `for(var i = 1; i < max; i++){`. Line 3 throws an error because `"use strict";` is on line 1, which means that strict mode is in effect. In strict mode, you cannot define a global variable (in this example, `i`); instead, you must use the `var` keyword and define a local variable instead.
+> Line 3 will throw an error indicating that the variable `i` is undefined. In order to correct this issue, you would need to edit line 3 as follows: ` for(var i = 1; i < max; i++){ `. Line 3 throws an error because `"use strict";` is on line 1, which means that strict mode is in effect. In strict mode, you cannot define a global variable (in this example, `i`); instead, you must use the `var` keyword and define a local variable.
 
 ```js
 /*1*/ "use strict";
