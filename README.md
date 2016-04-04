@@ -13,7 +13,13 @@
 Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a dependency. Use Angular code style conventions.
 
 **Your answer:**
-```js
+```
+(function(){
+  angular
+  .module("BlogPost", [
+    "ui.router"
+  ]);
+  })();
 
 ```
 
@@ -30,7 +36,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[X] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -46,6 +52,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 **Your answer:**
 
 > ...
+They both are examples of declaring methods on a controller that calls a create method when clicking the button. Adding data to ng-click allows the directive elements to be read by the html validator.
 
 ## Question 4
 
@@ -54,6 +61,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 **Your answer:**
 
 > ...
+A represents the best usage of ng-app. When ng-app is put within the html tag at the top of the page, tells AngularJS to be active for the entire document. This is important because it sets the scope of the entire single page app using proper styling as according to John Papa's style guide.
 
 ### A:
 ```html
@@ -72,7 +80,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +94,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +114,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -117,6 +125,7 @@ What is an IIFE, and why might you use it?
 **Your answer:**
 
 > ...
+An IIFE is an immediately invoked function expression. They remove variables from their global scope. This prevents variables and function declarations, which also helps avoid variable collisions and having too many global variables.
 
 ## Question 7
 
@@ -125,6 +134,7 @@ What is the `ui-sref` directive, and how is it used?
 **Your answer:**
 
 > ...
+ui-sref binds links to the a state (e.g. new page), and is used in the the index.html file. The sref component of the router checks to see if a state exists,  and return the url for that state if it does. It is used in the following syntax <data-ng-sref=stateName"{{param: }}">
 
 ## Question 8
 
@@ -133,6 +143,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 **Your answer:**
 
 > ...
+Line 3 will throw an error because the use of "use strict" changes JS into expert mode which requires all variables to be defined. In this case, "i" should be defined as var i.
 
 ```js
 /*1*/ "use strict";
@@ -151,7 +162,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+<my-custom-directive>Hi, my name is Max</my-custom-directive>
+<div class ="my-custom-directive"></div>
 ```
 
 ## Question 10
@@ -160,8 +172,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
-
+> ... Option B is the best method of organizing files in an Angular app. According to John Papa's styleguide, each folder should correlate to the feature it represents, in this case songs and artists. This allows for the most intuitive application structure, and will help when trying to find files . Option A should be avoided because organizing folders by type because as the amount of controllers and views increase in the app, it will be harder and harder to locate files.
 
 ### A:
 ```
@@ -212,4 +223,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
