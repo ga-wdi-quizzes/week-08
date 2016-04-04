@@ -115,7 +115,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -125,7 +125,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> In JavaScript, an IIFE is an "immediately-invoked function expression." The purpose of such a function expression is to protect the global scope against variables that are declared within the function. In his authoritative style guide for Angular 1, John Papa explains the reasoning behind this practice as follows: "An IIFE removes variables from the global scope. This helps prevent variables and function declarations from living longer than expected in the global scope, which also helps avoid variable collisions. When your code is minified and bundled into a single file for deployment to a production server, you could have collisions of variables and many global variables. An IIFE protects you against both of these by providing variable scope for each file."
 
 ## Question 7
 
@@ -133,7 +133,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> The `ui-sref` directive comes from Angular UI-Router, which is a client-side, single-page app routing framework that updates the browser's URL as the user navigates through the app. The `ui-sref` directive is like a link helper method in Ruby on Rails in that it replaces the typical `href` attribute of an `<a>` tag. In this case, the "s" in `sref` refers to a "state" within the app, rather than a different page. The app can include multiple locations (e.g., an index state, a show state, etc.) without requiring a page refresh; thus, the user can see the URL change as he or she navigates through the application, even though he or she is never actually visiting another page. In order to use `ui-sref`, you must include UI-Router as a dependency when you instantiate your main AngularJS module (i.e., the Angular app). The `sref` directive itself checks whether or not a state exists, and if it does, it returns the URL for it. If that URL has parameters, you can supply a value for that parameter and it will add it into the appropriate place in the URL.
 
 ## Question 8
 
@@ -141,7 +141,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> Line 3 will throw an error indicating that the variable `i` is undefined. In order to correct this issue, you would need to edit line 3 as follows: `for(var i = 1; i < max; i++){`. Line 3 throws an error because `"use strict";` is on line 1, which means that strict mode is in effect. In strict mode, you cannot define a global variable (in this example, `i`); instead, you must use the `var` keyword and define a local variable instead.
 
 ```js
 /*1*/ "use strict";
