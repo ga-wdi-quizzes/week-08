@@ -161,6 +161,11 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 **Your answer:**
 ```html
 
+<!-- Option 1 --> <my-directive></my-directive>
+<!-- Option 2 --> <div data-my-directive></div>
+
+<!-- The custom directive could also be embedded in HTML using a comment, or it could be embedded as the value of the class attribute on another tag. -->
+
 ```
 
 ## Question 10
@@ -169,7 +174,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> Option "B" is the most correct way to organize the files in an Angular app. Each view in an Angular app has its own controller, so the prescribed practice is to keep the `.js` and `.html` files for each view next to each other alphabetically in the file structure (all the "index" files should be next to each other). The files in an Angular app should be separated by model (an angular module), which is how it is done in option "B." Option "A" separates the files into views, directives, and controllers, and option "C" seems to separate the the files into HTML and JavaScript directories. Again, the goal is to have everything for your `artists` module (views, controllers, partials, and custom directives) in one directory and everything for the `songs` module in another.
 
 
 ### A:
