@@ -15,6 +15,15 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 **Your answer:**
 ```js
 
+"use strict";
+
+(function() {
+  angular
+  .module("BlogPost", [
+    "ui.router";
+  ])
+})():
+
 ```
 
 ## Question 2
@@ -31,7 +40,7 @@ Which *one* of the following buttons would *not* be displayed?
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
 [ ] C: <button data-ng-hide="status">Click</button>
-[ ] D: <button>{{status}}</button>
+[X] D: <button>{{status}}</button>
 ```
 
 ## Question 3
@@ -45,7 +54,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> Functionally, there is zero difference. Placing "data" in front of "ng-click" allows the html to pass a validator test.
 
 ## Question 4
 
@@ -53,7 +62,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> [A]  The data-ng-app designates which HTML element is the root directory of the angular application.  In other words, it defines the HTML element where all the angular activity will take place.  As a general rule, it is good practice to designate the HTML tag as the root directory, because no matter where you end up implementing angular, it will be within the ng-app domain.
 
 ### A:
 ```html
@@ -72,7 +81,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +95,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +115,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +125,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> IIFE stands for immediately-invoked function expression. IIFE's are utilized in angular because IIFEs limit the scope of the variables within it and the code will be executed as soon as it is loaded.  So within an IIFE, we can create a new angular module and not have to worry about global variables and the arguments mixing with other program elements.
 
 ## Question 7
 
@@ -124,7 +133,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> The ui-sref is an angular directive that binds links on an HTML page to a specific angular state.  Clicking the link will change to that state. (<a data-ui-sref="new">New Item</a>)  
 
 ## Question 8
 
@@ -132,7 +141,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> Line 3.  When setting the parameters for the for loop, i has not yet been defined.  You probably need it to be: for(var i = 1; i < max; i++)
 
 ```js
 /*1*/ "use strict";
@@ -151,6 +160,33 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
+Custom directives can be restricted four different ways.  E - available as an HTML element, A - available as an HTML attribute, C - available as a class, M - available as a comMent.
+
+(function() {
+  angular
+  .module("quiz")
+  .directive("my-directive", function() {
+    return {
+      template: "<h1>This is a custom element.</h1>",
+      restrict: "E"
+    }
+  })
+})();
+
+<my-directive></my-directive>
+
+(function() {
+  angular
+  .module("quiz")
+  .directive("my-directive", function() {
+    return {
+      template: "<h1>This is a custom element.</h1>",
+      restrict: "A"
+    }
+  })
+})();
+
+<p my-directive></p>
 
 ```
 
@@ -160,7 +196,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> [B]
 
 
 ### A:
@@ -212,4 +248,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
