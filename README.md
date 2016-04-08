@@ -48,7 +48,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> Functionally, there is no difference, but when put into an html validator the button with the `data-` prefixed attribute will validate and the other will not. The  `data-` tells the validator to ignore what ever attribute that is.
 
 ## Question 4
 
@@ -56,7 +56,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> Choice `A` demonstrates the best usage of `ng-app`. Putting it in the html tag will ensure that your app is visible to the entire document.
 
 ### A:
 ```html
