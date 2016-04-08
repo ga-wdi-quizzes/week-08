@@ -109,7 +109,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -119,7 +119,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> Immediately Invoked Function Expression - it would be used to make sure that the code you want to run is immediately run when the page loads.
 
 ## Question 7
 
@@ -127,7 +127,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> `ui-sref` is used in an anchor tag to link to a different state.
 
 ## Question 8
 
@@ -135,7 +135,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> Line 3 will throw an error because the variable `i` was not instantiated with the `var` keyword, which is required in strict mode.
 
 ```js
 /*1*/ "use strict";
