@@ -154,7 +154,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+<!-- A --> <div my-directive></div>
+<!-- E --> <my-directive></my-directive>
 ```
 
 ## Question 10
@@ -163,7 +164,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> Option `B`. I chose this because it demonstrates appropriate modularity for the app. We are keeping everything from each module together, and keeping each module separate from the others.
 
 
 ### A:
