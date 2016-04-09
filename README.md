@@ -158,6 +158,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
+<my-directive></my-directive>
+<div my-directive></div>
 
 ```
 
