@@ -14,7 +14,12 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
-
+(function(){
+  angular
+  .module('BlogPost',[
+    'ui.router'
+  ])
+})();
 ```
 
 ## Question 2
@@ -30,7 +35,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[X] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -45,12 +50,14 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+Technically, it makes no difference. But using "data" is good practice
 
 ## Question 4
 
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
+"A" demonstrates the best usage of ng-app because it is connecting the entire page.  In the case of letter C, the ng-app is in a div, it will only connect what is in that div, nothing above.
 
+I think I need more clarification on this one.
 **Your answer:**
 
 > ...
@@ -72,7 +79,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +93,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +113,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +123,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+An IIFE is an immediately invoked function expression. It is used to instantiate an angular module. By wrapping it in parens and calling the function immediately at the end, the function is run as soon as the page is refreshed.
 
 ## Question 7
 
@@ -124,7 +131,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+It is angulars way of linking pages together such as the show.html or index.html
 
 ## Question 8
 
@@ -132,7 +139,8 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+Line 3, because when you "use strict" your javascript goes into super mode and little things like not using "var" will throw an error. It should read
+for (var i = 1; i < max; i++)
 
 ```js
 /*1*/ "use strict";
@@ -150,7 +158,11 @@ One of the lines of code in the following snippet will throw an error. Which one
 Custom directives can be embedded in HTML four different ways. Demonstrate **two** of these four with a directive called `my-directive`. (Hint: "MACE")
 
 **Your answer:**
-```html
+```
+M-comment
+A-attribute
+C-class
+E-element
 
 ```
 
@@ -159,8 +171,7 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
-
-> ...
+As apps get larger - it is easier to keep things organized by the model.  In this case, letter B would be the best example of this practice.  By organizing files by model, one does not have to scroll nearly as much, as they can simply look for the model name and then find the file of interest.
 
 
 ### A:
@@ -212,4 +223,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
