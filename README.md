@@ -14,6 +14,14 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
+(function(){
+    "use strict";
+
+    angular
+        .module("BlogPost", [
+            "ui.router"
+        ]);
+})();
 
 ```
 
@@ -30,7 +38,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[X] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -43,7 +51,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 <button data-ng-click="create()">Click</button>
 ```
 
-**Your answer:**
+**prefixing the attribute with "data-" is just a hack to make it validate in HTML validators:**
 
 > ...
 
@@ -51,9 +59,20 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
-**Your answer:**
+**Your Answer:**
 
-> ...
+> Where you link ng-app can vary based on what you're trying to do.
+
+In this case, A. because neither B. or C. will allow ui-sref to link correctly
+in the h1 tag. ng-app must be linked in an anscestor for its bindings to be
+available.
+
+In B., ng-app is being linked in the head, which is a sibling of the body
+element (where ui-sref is being linked in a descendant).
+
+In C., ng-app is being linked in a following sibling element of h1 (which is
+a parent of where ui-sref is being linked).
+
 
 ### A:
 ```html
@@ -106,7 +125,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +135,17 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> An IIFE stands for Immediately Invoked Function Expression.  It runs
+immediately after its definition is evaluated.  In angular, and other
+JavaScript applications, it's typically used to wrap all code in order to
+protect the global scope.
+
+Everything inside the function is isolated, and has its own `this` so nothing
+can conflict with window or document.  Also, global objects like window, document
+or JQuery can be passed into the IFFE as arguments to speed up lookups when
+accessing those elements, and allow for the access of those global objects to
+be minified.
+
 
 ## Question 7
 
@@ -124,7 +153,10 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> It is an attribute of ui-router used in the a tag that allows linking to
+outside pages from within an angular app.
+
+e.g.  <a ui-sref="{{itemShowVM.url}}">Item</a>
 
 ## Question 8
 
@@ -132,7 +164,9 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> line 3 because in strict mode every variable must be intialized with the word
+"var" prefixing it.  Here, "i" is initialized in the loop definition without
+"var".
 
 ```js
 /*1*/ "use strict";
@@ -151,6 +185,23 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
+(function(){
+    "use strict";
+
+    angular
+        .directive("my-directive", [
+            myDirectiveFunc
+        ]);
+
+    function myDirectiveFunc(){
+        return {
+            scope: {
+                dataObject: '=', // two way object binding
+                stringParam: '@' // one way string binding
+            }
+        };
+    }
+})();
 
 ```
 
@@ -160,7 +211,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> B. because it's easier to navigate between files if they are more intuitively grouped.
 
 
 ### A:
