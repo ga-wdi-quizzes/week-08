@@ -58,8 +58,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 **Your answer:**
-A is the most correct answer because it contains all of the angular directives.
-> ...
+> A is the most correct answer because it contains all of the angular directives.
 
 ### A:
 ```html
