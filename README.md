@@ -14,6 +14,9 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
+module("BlogPost", [
+  "ui.router"
+])
 
 ```
 
@@ -30,7 +33,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[x] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -43,7 +46,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 <button data-ng-click="create()">Click</button>
 ```
 
-**Your answer:**
+Both of the above buttons will perform the same function, but that with the data-ng-click will validate in an HTML validator, wheras the other may cause the validator to throw an error.
 
 > ...
 
@@ -51,7 +54,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
-**Your answer:**
+Option A is best due to the issue of scope. Since ng-app means that everything within it will be contained within the scope of the entire app, it's best to attach it to the <html> tag (since everything is contained within the <html> tag). Placing it anywhere else (including options B and C) will close it before the app actually begins to function.
 
 > ...
 
@@ -72,7 +75,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +89,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +109,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -114,7 +117,7 @@ Which one of the following concepts does this best illustrate?
 
 What is an IIFE, and why might you use it?
 
-**Your answer:**
+An IIFE is an "immediately invoked function expression." Using an IIFE removes variables from the global scope.
 
 > ...
 
@@ -122,15 +125,14 @@ What is an IIFE, and why might you use it?
 
 What is the `ui-sref` directive, and how is it used?
 
-**Your answer:**
-
+The "ui-sref" is used within an <a> tag and is used to declare where a link should be placed. It is used in Angular. Since Angular is used for single page applications, one should and cannot use an <a href=""> because the link should not be taking the user to a new URL or refreshed browser.
 > ...
 
 ## Question 8
 
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
-**Your answer:**
+Line 3 will throw the error because "i" is not defined.
 
 > ...
 
@@ -150,7 +152,8 @@ One of the lines of code in the following snippet will throw an error. Which one
 Custom directives can be embedded in HTML four different ways. Demonstrate **two** of these four with a directive called `my-directive`. (Hint: "MACE")
 
 **Your answer:**
-```html
+```
+<div class="my-directive"></div>
 
 ```
 
@@ -158,7 +161,7 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
-**Your answer:**
+I believe B is the best option for organizing this particular Angular app, considering the developer is primarily working with "artists" and "songs" related data. This organizational structure clearly separates the two. It's "app.js" file is living within its own main directory, and then the respective "artists" and "songs" are separated, considering some files and directives may not interact with each other.
 
 > ...
 
@@ -212,4 +215,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
