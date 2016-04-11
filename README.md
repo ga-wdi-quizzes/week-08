@@ -53,7 +53,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **prefixing the attribute with "data-" is just a hack to make it validate in HTML validators:**
 
-> ...
+> Prefixing the attribute with "data-" is just a hack to make it validate in HTML validators.
 
 ## Question 4
 
