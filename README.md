@@ -33,10 +33,10 @@ scope.status = "Click";
 Which *one* of the following buttons would *not* be displayed?
 
 ```html
-[? ] A: <button data-ng-if="status">Click</button>
-[?] B: <button data-ng-show="status">Click</button>
+[ ] A: <button data-ng-if="status">Click</button>
+[x] B: <button data-ng-show="status">Click</button>
 [ ] C: <button data-ng-hide="status">Click</button>
-[X] D: <button>{{status}}</button>
+[] D: <button>{{status}}</button>
 ```
 
 ## Question 3
@@ -142,7 +142,7 @@ sref stands for state. When using "ui-sref", it checks to see if the state exist
 
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
-Line #2 because if it not defining a function. 
+Line #2 because i is not defined.
 
 > ...
 
