@@ -62,16 +62,12 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 **Your Answer:**
 
 > Where you link ng-app can vary based on what you're trying to do.
-
-In this case, A. because neither B. or C. will allow ui-sref to link correctly
-in the h1 tag. ng-app must be linked in an anscestor for its bindings to be
-available.
-
-In B., ng-app is being linked in the head, which is a sibling of the body
-element (where ui-sref is being linked in a descendant).
-
-In C., ng-app is being linked in a following sibling element of h1 (which is
-a parent of where ui-sref is being linked).
+>
+> In this case, A. because neither B. or C. will allow ui-sref to link correctly in the h1 tag. ng-app must be linked in an anscestor for its bindings to be available.
+>
+> In B., ng-app is being linked in the head, which is a sibling of the body element (where ui-sref is being linked in a descendant).
+>
+> In C., ng-app is being linked in a following sibling element of h1 (which is a parent of where ui-sref is being linked).
 
 
 ### A:
@@ -135,17 +131,9 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> An IIFE stands for Immediately Invoked Function Expression.  It runs
-immediately after its definition is evaluated.  In angular, and other
-JavaScript applications, it's typically used to wrap all code in order to
-protect the global scope.
-
-Everything inside the function is isolated, and has its own `this` so nothing
-can conflict with window or document.  Also, global objects like window, document
-or JQuery can be passed into the IFFE as arguments to speed up lookups when
-accessing those elements, and allow for the access of those global objects to
-be minified.
-
+> An IIFE stands for Immediately Invoked Function Expression.  It runs immediately after its definition is evaluated.  In angular, and other JavaScript applications, it's typically used to wrap all code in order to protect the global scope.
+>
+> Everything inside the function is isolated, and has its own `this` so nothing can conflict with window or document.  Also, global objects like window, document or JQuery can be passed into the IFFE as arguments to speed up lookups when accessing those elements, and allow for the access of those global objects to be minified.
 
 ## Question 7
 
@@ -153,8 +141,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> It is an attribute of ui-router used in the a tag that allows linking to
-outside pages from within an angular app.
+> It is an attribute of ui-router used in the a tag that allows linking to outside pages from within an angular app.
 
 e.g.  <a ui-sref="{{itemShowVM.url}}">Item</a>
 
@@ -164,9 +151,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> line 3 because in strict mode every variable must be intialized with the word
-"var" prefixing it.  Here, "i" is initialized in the loop definition without
-"var".
+> line 3 because in strict mode every variable must be intialized with the word "var" prefixing it.  Here, "i" is initialized in the loop definition without "var".
 
 ```js
 /*1*/ "use strict";
