@@ -14,7 +14,14 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
+"use strict";
 
+(function(){
+  angular
+  .module("BlogPost", [
+    "ui.router"
+  ]);
+})();
 ```
 
 ## Question 2
@@ -30,7 +37,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[x] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -44,16 +51,14 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 ```
 
 **Your answer:**
-
-> ...
+> In terms of html validation, 'ng-click' doesn't validate. Putting 'data' before let's the validator know what to expect.
 
 ## Question 4
 
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 **Your answer:**
-
-> ...
+> A is the most correct answer because it contains all of the angular directives.
 
 ### A:
 ```html
@@ -106,7 +111,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -115,24 +120,21 @@ Which one of the following concepts does this best illustrate?
 What is an IIFE, and why might you use it?
 
 **Your answer:**
-
-> ...
+> Immediately-Invoked Function Expression and you might expect to see a function being defined and then called immediately. Using IIFE's cut down on cluttered global variables.
 
 ## Question 7
 
 What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
-
-> ...
+> An angular state URL which allows users to dynamically switch between links without a constant refresh.
 
 ## Question 8
 
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
 **Your answer:**
-
-> ...
+> Line 3 throws an error because when you use "use strict"; it puts you in "Super JavaScript" mode which doesn't allow you to use a variable that hasn't been declared with a "var" first.
 
 ```js
 /*1*/ "use strict";
@@ -151,7 +153,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+<div class="my-directive"></div>
+<div data-my-directive></div>
 ```
 
 ## Question 10
@@ -159,8 +162,7 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
-
-> ...
+> B is the correct way because it properly shows the "seperation of concerns". Everything that relates to the same components should be beside each other. As you can see in A and C they have their files out of order and in the wrong folders.
 
 
 ### A:
