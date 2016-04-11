@@ -15,6 +15,13 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 **Your answer:**
 ```js
 
+(function(){
+  angular
+  .module("BlogPost", [
+    "ui.router"
+  ])
+}());
+
 ```
 
 ## Question 2
@@ -30,7 +37,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[ X ] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -43,7 +50,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 <button data-ng-click="create()">Click</button>
 ```
 
-**Your answer:**
+They both do the same thing but the one with data will pass html validation while the one without won't.
 
 > ...
 
@@ -51,7 +58,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
-**Your answer:**
+A: This runs the "myapp" module inside the html element. It would also work if it was placed inside the body element.
 
 > ...
 
@@ -72,7 +79,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +93,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +113,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[ X ] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -114,7 +121,7 @@ Which one of the following concepts does this best illustrate?
 
 What is an IIFE, and why might you use it?
 
-**Your answer:**
+An IIFE is an immediately-invoked function expression. It's used to prevent global variables.
 
 > ...
 
@@ -122,7 +129,7 @@ What is an IIFE, and why might you use it?
 
 What is the `ui-sref` directive, and how is it used?
 
-**Your answer:**
+ui-sref is angular's version of href in the anchor tag. It's used by binding a state (like the index) to a link (the anchor tag).
 
 > ...
 
@@ -130,7 +137,7 @@ What is the `ui-sref` directive, and how is it used?
 
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
-**Your answer:**
+Line 3 throws an error, because i is not defined.
 
 > ...
 
@@ -151,14 +158,15 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+1. Element: <my-directive></my-directive>
+2. Attribute: <div my-directive></div>
 ```
 
 ## Question 10
 
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
-**Your answer:**
+B is the best option, because it gathers all the files associated with the model together. It cuts out redundancy like seen in option A.
 
 > ...
 
@@ -212,4 +220,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
