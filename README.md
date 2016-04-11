@@ -63,7 +63,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 > Where you link ng-app can vary based on what you're trying to do.
 >
-> In this case, A. because neither B. or C. will allow ui-sref to link correctly in the h1 tag. ng-app must be linked in an anscestor for its bindings to be available.
+> In this case, A. because neither B. or C. will allow ui-sref to link correctly in the h1 tag. ng-app must be linked in a parent, grandparent, ancestor or the element itself for its bindings to be available.
 >
 > In B., ng-app is being linked in the head, which is a sibling of the body element (where ui-sref is being linked in a descendant).
 >
