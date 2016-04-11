@@ -51,8 +51,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 ```
 
 **Your answer:**
-In terms of html validation, 'ng-click' doesn't validate. Putting 'data' before let's the validator know what to expect.
-> ...
+> In terms of html validation, 'ng-click' doesn't validate. Putting 'data' before let's the validator know what to expect.
 
 ## Question 4
 
@@ -122,24 +121,21 @@ Which one of the following concepts does this best illustrate?
 What is an IIFE, and why might you use it?
 
 **Your answer:**
-Immediately-Invoked Function Expression and you might expect to see a function being defined and then called immediately. Using IIFE's cut down on cluttered global variables.
-> ...
+> Immediately-Invoked Function Expression and you might expect to see a function being defined and then called immediately. Using IIFE's cut down on cluttered global variables.
 
 ## Question 7
 
 What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
-An angular state URL which allows users to dynamically switch between links without a constant refresh.
-> ...
+> An angular state URL which allows users to dynamically switch between links without a constant refresh.
 
 ## Question 8
 
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
 **Your answer:**
-Line 3 throws an error because when you use "use strict"; it puts you in "Super JavaScript" mode which doesn't allow you to use a variable that hasn't been declared with a "var" first.
-> ...
+> Line 3 throws an error because when you use "use strict"; it puts you in "Super JavaScript" mode which doesn't allow you to use a variable that hasn't been declared with a "var" first.
 
 ```js
 /*1*/ "use strict";
@@ -167,8 +163,7 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
-B is the correct way because it properly shows the "seperation of concerns". Everything that relates to the same components should be beside each other. As you can see in A and C they have their files out of order and in the wrong folders.
-> ...
+> B is the correct way because it properly shows the "seperation of concerns". Everything that relates to the same components should be beside each other. As you can see in A and C they have their files out of order and in the wrong folders.
 
 
 ### A:
