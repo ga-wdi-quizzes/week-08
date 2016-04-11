@@ -14,6 +14,16 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
+"Use  strict";
+
+(function()
+{
+  angular
+  .module ("BlogPost",[
+  "ui.router"
+  ]);
+  })();
+
 
 ```
 
@@ -22,7 +32,16 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 Given a custom directive whose `link` function contains the line:
 
 ```js
-scope.status = "Click";
+.directive('click',function(){
+  return {
+    template:'<h1> Today you have a status of {{status}}!</h1>',
+    link:function(scope){
+      scope.status = "Click";
+    }
+  }
+});
+})();
+
 ```
 
 Which *one* of the following buttons would *not* be displayed?
@@ -30,7 +49,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[ x] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -45,7 +64,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> the data-ng-click is used so that it can html can be validated but does not change the functionality.
 
 ## Question 4
 
@@ -53,7 +72,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> ###A because it is at the beginning .  ng-app is used to Instantiate/ initialize the application so it would be best to be at the top of code it can read/load  the information needed for module.
 
 ### A:
 ```html
@@ -72,7 +91,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +105,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +125,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x ] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +135,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> immediately-invoked function expression which means it can be called as soon as it is defined .  It is used to group variables together any variable declared inside it does not exist outside it .
 
 ## Question 7
 
@@ -124,7 +143,8 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+The ui-sref directive is checking for a different state that would previously have been defined in the controller. It is a way of linking information from different states on a page.
+
 
 ## Question 8
 
@@ -132,7 +152,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> 3 because i is not define according to the guidelines of "use strict"; in js
 
 ```js
 /*1*/ "use strict";
@@ -151,7 +171,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+<my-directive></my-directive>
+<div data-my-directive></div>
 ```
 
 ## Question 10
@@ -160,7 +181,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> ##B  you first separate into models and define the controller to be able to see the views.
 
 
 ### A:
@@ -212,4 +233,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
