@@ -14,7 +14,7 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
-
+Angular.module("BlogPost", [ui.router])
 ```
 
 ## Question 2
@@ -22,6 +22,7 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 Given a custom directive whose `link` function contains the line:
 
 ```js
+data-ng-myapp
 scope.status = "Click";
 ```
 
@@ -29,7 +30,7 @@ Which *one* of the following buttons would *not* be displayed?
 
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
-[ ] B: <button data-ng-show="status">Click</button>
+[X] B: <button data-ng-show="status">Click</button>
 [ ] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
@@ -44,7 +45,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 ```
 
 **Your answer:**
-
+prefixing the angular method with data makes ensures that the HTML will validate. "data" is a pointer to the validator not to parse the information that immediately follows.
 > ...
 
 ## Question 4
@@ -52,7 +53,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 **Your answer:**
-
+A: Placing the code in the html element is best because it makes the angular module available in the entire page. It's also serves as a good visual cue.
 > ...
 
 ### A:
@@ -72,7 +73,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +87,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +107,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -115,7 +116,8 @@ Which one of the following concepts does this best illustrate?
 What is an IIFE, and why might you use it?
 
 **Your answer:**
-
+Immediately Invoked Function Expression:
+It helps to limit the scope of variables that will be declared. It also helps to ensure that the arguments we pass into function within it are not lost during code minification.
 > ...
 
 ## Question 7
@@ -123,7 +125,7 @@ What is an IIFE, and why might you use it?
 What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
-
+It is a ui.router directive used to link states within an angular application
 > ...
 
 ## Question 8
@@ -131,7 +133,7 @@ What is the `ui-sref` directive, and how is it used?
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
 **Your answer:**
-
+Line 3: Everything has to be specified when you are in javascript strict mode.
 > ...
 
 ```js
@@ -151,7 +153,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+restrict: 'E' <my-directive></my-directive>
+restrict: 'C' <div class='my-directive'></div>
 ```
 
 ## Question 10
@@ -159,7 +162,7 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
-
+B :
 > ...
 
 
@@ -212,4 +215,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
