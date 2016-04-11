@@ -14,7 +14,12 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
-
+(function(){
+  angular
+  .module("BlogPost", [
+    "ui.router"
+  ])
+})
 ```
 
 ## Question 2
@@ -45,7 +50,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+Both buttons would work, but data-ng-click is a valid attribute in HTML5, while ng-click is not.
 
 ## Question 4
 
@@ -53,7 +58,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> Option C demonstrates the best usage on ng-app. Otion A will call in the angular app "myapp" on the whole page since it's place in the html tag. Option B will only call it in the header and nowhere else. While option C correctly calls it for the the particular DIV where the app will be applied.
 
 ### A:
 ```html
@@ -72,7 +77,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +91,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +111,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +121,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> An IIFE is an Immediately-Invoked Function Expression. It is a JS design that is used to avoid variable hoisting from within blocks and to avoid polluting the Global Scope.
 
 ## Question 7
 
@@ -124,7 +129,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> ui-sref is a directive that binds a link to a state.
 
 ## Question 8
 
@@ -160,7 +165,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> Option C is considered better. Unlike the other 2 setups, option C has folders for like typed files. 
 
 
 ### A:
@@ -212,4 +217,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
