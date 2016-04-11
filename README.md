@@ -13,7 +13,13 @@
 Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a dependency. Use Angular code style conventions.
 
 **Your answer:**
-```js
+```
+(function(){
+angular
+.module("BlogPost", [
+"ui.router"
+]);
+})();
 
 ```
 
@@ -30,7 +36,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[ x] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -43,7 +49,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 <button data-ng-click="create()">Click</button>
 ```
 
-**Your answer:**
+**Your answer: function wise, there really isn't a difference. In terms of HTML, the difference is that in validators, it will not recognize ng-click and won't know what to do with it so it will ignore it. Putting Data first makes the html valid  as **
 
 > ...
 
@@ -51,7 +57,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
-**Your answer:**
+**I would choose A because B will only be recognized in the head as the ui-sref is in the body. The best place to put it ideally would be in the body so the app can run faster but in C, ng app is within a div and is also below the directive. Html would need to render the app first so it can know what to do. So because of this, I chose A because it's properly placed in a html root element, the whole document will read it and any directive can connect with it no matter where it's placed.**
 
 > ...
 
@@ -72,7 +78,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +92,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +112,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[ x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -114,7 +120,7 @@ Which one of the following concepts does this best illustrate?
 
 What is an IIFE, and why might you use it?
 
-**Your answer:**
+**Your answer: an iffe invokes the angular module immediately once loaded. It's also a way for us to keep all of our functions for our model wrapped into one. **
 
 > ...
 
@@ -122,7 +128,7 @@ What is an IIFE, and why might you use it?
 
 What is the `ui-sref` directive, and how is it used?
 
-**Your answer:**
+**Your answer: the ui-sref is a ui.router directive that we have access to and it is angulars version of href. It does the same thing by linking to whatever state or url you link it to**
 
 > ...
 
@@ -130,7 +136,7 @@ What is the `ui-sref` directive, and how is it used?
 
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
-**Your answer:**
+**Your answer: line 3 because you cannot write i=1. In strict mode, var is required to initiate a variable. so it would have to be var i = 1. **
 
 > ...
 
@@ -152,13 +158,16 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 **Your answer:**
 ```html
 
+<div my-directive></div>
+<div class="my-directive"></div>
+
 ```
 
 ## Question 10
 
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
-**Your answer:**
+**Your answer: I would choose 'A' because it separates the concerns more clearly. the app.js shouldn't be within any of the folders because it controls the entire app. within views should all the html files go because views deals with how the modules and controllers show on the actual site. It deals with html and html only. The directives are for custom modules we need for our app and in this case, its a form for both artists and songs. This js is not the same as the js files that's needed for the views. This is totally different and deals more with the function than the way it behaves and view. Those types for files should go into the controllers app because that's what it deals with. the specific modules and functions for the overall view for artists. In this case it controls the index page that shows all the artists and is linked to the index.html and the show controller for individual pages for artsts_index.html. The _form in directives and views has nothing to do with the overall CRUD, that's why the Separation of concerns is needed and I  chose A. The others are not as organized and are all over the place. Doesn't represent the MVC.  **
 
 > ...
 
@@ -212,4 +221,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
