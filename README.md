@@ -60,7 +60,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> The answer is A.  The "ng-app" directive initiates Angular and allows Angular to operate within the element it is invoked on and all that element's child elements. In A it's invoked on the <html> tag and will thus operate on the entire site.  In B it will only operate within the <head> element, and in C it will only operate within the <div> it is invoked in.  
+> The answer is A.  The "ng-app" directive initiates Angular and allows Angular to operate within the element it is invoked on and all that element's child elements. In A it's invoked on the "html" tag and will thus operate on the entire site.  In B it will only operate within the "head" element, and in C it will only operate within the "div" it is invoked in.  
 
 ### A:
 ```html
