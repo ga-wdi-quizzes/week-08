@@ -123,7 +123,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> An IIFE is an "immediately invoked function expression."  It is a function that is called as soon as it's defined, and any variables declared inside it will not exist inside it and will not pollute other scopes.   
+> An IIFE is an "immediately invoked function expression."  It is a function that is called as soon as it's defined, and any variables declared inside it will only exist inside it and will not pollute other scopes.   
 
 ## Question 7
 
@@ -159,13 +159,13 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 **Your answer:**
 
 ```html
-<!-- Attribute         -->
+<!-- Attribute  -->
 <div my-directive="something"></div>
 
-<!--  Element                -->
+<!--  Element   -->
 <my-directive></my-directive>
 
-<!--  Element                -->
+<!--  Class     -->
 <div class="my-directive: something;"></div>
 ```
 
