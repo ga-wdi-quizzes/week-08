@@ -15,6 +15,14 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 **Your answer:**
 ```js
 
+(function(){
+  angular
+    .module("BlofPost", // the main app
+    [ // And it's dependencies
+      "ui.router",
+    ])
+    }
+    )
 ```
 
 ## Question 2
