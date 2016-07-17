@@ -61,7 +61,8 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> A. ng-app specifies the root element of the application. Only A puts the root element where it contains the data-ui-sref. It's a bit like saying ng-app is in Washington, DC, and data-ui-sref is in Northwest. 
+> 
+A. ng-app specifies the root element of the application. Only A puts the root element where it contains the data-ui-sref. It's a bit like saying ng-app is in Washington, DC, and data-ui-sref is in Northwest. 
 B puts ng-app in head, but data-ui-sref in body. That's a little like saying ng-app is in Washington, but data-ui-sref is in Arlington. 
 C puts them in different elements in the body. Maybe ng-app is in Ballston, and data-ui-sref is in Clarendon. In neither B nor C does data-ui-sref "live in" ng-app.
 
@@ -116,7 +117,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
