@@ -20,9 +20,9 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
     .module("BlofPost", // the main app
     [ // And it's dependencies
       "ui.router",
-    ])
-    }
-    )
+    ]
+  )
+})
 ```
 
 ## Question 2
@@ -38,7 +38,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[x] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
