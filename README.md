@@ -144,10 +144,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 **Your answer:**
 
 > ...
-
-Line 3 (the start of the for loop) because line 1 specifies use strict and we do not previously declare i. 
-
-I suppose you could line 1 causes the error, since it is actually what "puts the policy in place" that causes the error to be thrown.
+Line 3 (the start of the for loop) because line 1 specifies use strict and we do not previously declare i. I suppose you could line 1 causes the error, since it is actually what "puts the policy in place" that causes the error to be thrown.
 
 
 ```js
