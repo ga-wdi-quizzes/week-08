@@ -14,7 +14,14 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
-
+(function(){
+  angular
+    .module("BlogPost", [ "ui.router"])
+    .config([
+      "$stateProvier",
+      RouterFucntion
+    ]);
+})();
 ```
 
 ## Question 2
@@ -30,7 +37,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[x] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -45,7 +52,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> the extra 'data-' makes it so that the html validates.
 
 ## Question 4
 
@@ -53,7 +60,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> A uses data-ng-app the best. Using ng-app in the html tag instantiates the angular app for the whole page.
 
 ### A:
 ```html
@@ -72,7 +79,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +93,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +113,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x ] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +123,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> Immediately invoked function expression. IIFE's are functions that are called immediately and have variables specific to the scope of the function.
 
 ## Question 7
 
@@ -124,7 +131,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> ui-sref is used to link to a different page view or state.
 
 ## Question 8
 
@@ -132,7 +139,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> Line 3 is missing var before "i = 1;". With "use strict" at the top, all syntax has to be correct.
 
 ```js
 /*1*/ "use strict";
@@ -151,7 +158,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+<my-directive></my-directive>
+<span class:"my-directive"></span>
 ```
 
 ## Question 10
@@ -160,7 +168,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+>B is the most "correct" way of organizing the files. All files associated with artists are found under the artists folder, etc.
 
 
 ### A:
@@ -212,4 +220,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
