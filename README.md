@@ -53,7 +53,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> They are functionally equivalent. However, only data-ng-click will pass the strictest HTML compliance tests. 
 
 ## Question 4
 
