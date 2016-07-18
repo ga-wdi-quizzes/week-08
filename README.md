@@ -13,7 +13,15 @@
 Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a dependency. Use Angular code style conventions.
 
 **Your answer:**
-```js
+```
+
+(function(){
+  angular
+  .module("BlogPost",[
+  "ui.router"
+  ]);
+}());
+
 
 ```
 
@@ -21,7 +29,7 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 Given a custom directive whose `link` function contains the line:
 
-```js
+```
 scope.status = "Click";
 ```
 
@@ -30,7 +38,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[x] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -45,7 +53,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> data is used for html validator. There are no difference in functionality.
 
 ## Question 4
 
@@ -53,7 +61,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> A is the answer.  The ng-app directive should be attached to the element that contains all the other angular directives.
 
 ### A:
 ```html
@@ -72,7 +80,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +94,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +114,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +124,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> Immediately-Invoked Function Expression. It is used to keep the variables inside the scope, keeping the global variables separated.
 
 ## Question 7
 
@@ -124,7 +132,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> it is used to switch between states.
 
 ## Question 8
 
@@ -132,7 +140,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> line 3, you have to add var in front of i=1 due to user strict.
 
 ```js
 /*1*/ "use strict";
@@ -150,8 +158,9 @@ One of the lines of code in the following snippet will throw an error. Which one
 Custom directives can be embedded in HTML four different ways. Demonstrate **two** of these four with a directive called `my-directive`. (Hint: "MACE")
 
 **Your answer:**
-```html
-
+```
+data-my-directive
+<my-directive></my-directive>
 ```
 
 ## Question 10
@@ -160,7 +169,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> B is the answer. Its better to keep the components alike together. It keeps us from jumping between the folder tree while working on one item. 
 
 
 ### A:
@@ -212,4 +221,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
