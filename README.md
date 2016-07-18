@@ -175,7 +175,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> B is the "most correct" choice, because it practices separation of concerns. The app is concerned with artists and sopngs, thus its code should be separated on that basis. A splits it into controllers, directives amd views, and C splits it into HTML and JS (plus further sorting.) Readablity and maintainablity is a key reason its better; at just one glance of the top level directory structure, someone who knows nothing else about the code knows this is a music related app, and which files handle artists and songs. The other two structures top levels just say "it's a JS app."
 
 
 ### A:
