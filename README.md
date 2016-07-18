@@ -13,8 +13,16 @@
 Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a dependency. Use Angular code style conventions.
 
 **Your answer:**
-```js
+```
+"use strict";
 
+(function(){
+  angular
+  .module("BlogPost", [
+    "ui.router",
+    "posts",
+  ])
+}());
 ```
 
 ## Question 2
@@ -31,7 +39,8 @@ Which *one* of the following buttons would *not* be displayed?
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
 [ ] C: <button data-ng-hide="status">Click</button>
-[ ] D: <button>{{status}}</button>
+[ x] D: <button>{{status}}</button>
+
 ```
 
 ## Question 3
@@ -43,15 +52,13 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 <button data-ng-click="create()">Click</button>
 ```
 
-**Your answer:**
+No difference, data- will allow html to validate
 
 > ...
 
 ## Question 4
 
-Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
-
-**Your answer:**
+Which of the following demonstrates the best usage of `ng-app`?
 
 > ...
 
@@ -69,34 +76,11 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 </html>
 ```
 
-### B:
-```html
-<!DOCTYPE html>
-<html> 
-  <head data-ng-app="myapp">
-    <title>My app</title>
-  </head>
-  <body>
-    <h1><a data-ui-sref="index">My App</a></h1>
-    <div></div>
-  </body>
-</html>
-```
+Having ng-app in the html allows you to change the title of the page, supposedly having ng-app in body makes it slightly faster. but there is no real wrong of having it in html or body.
 
-### C:
-```html
-<!DOCTYPE html>
-<html> 
-  <head>
-    <title>My app</title>
-  </head>
-  <body>
-    <h1><a data-ui-sref="index">My App</a></h1>
-    <div data-ng-app="myapp"></div>
-  </body>
-</html>
-```
+putting it in head only changes the head.. so thats wrong and in the div is wrong too, that is where a view should be (sref)
 
+```
 ## Question 5
 
 Imagine an app in which a change to the view updates the model without a page refresh, and a change to the model updates the view without a page refresh.
@@ -106,7 +90,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -115,7 +99,7 @@ Which one of the following concepts does this best illustrate?
 What is an IIFE, and why might you use it?
 
 **Your answer:**
-
+standas for immediately invoked function expression, its good practice to use it because in very large scale projects, we do not want to pollute the name space in all of our controllers, meaning that there will be no naming conflicts in all the controllers and each controller has its own set of variables.
 > ...
 
 ## Question 7
@@ -123,7 +107,7 @@ What is an IIFE, and why might you use it?
 What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
-
+this is used to render a view
 > ...
 
 ## Question 8
@@ -131,7 +115,7 @@ What is the `ui-sref` directive, and how is it used?
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
 **Your answer:**
-
+Because we are of 'use strict' i=1 will cause an error because it is not defined.
 > ...
 
 ```js
@@ -152,6 +136,18 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 **Your answer:**
 ```html
 
+my-directives are 'rules' for whats inside our ng-app. we can also use them to repeat and make small fast changes to the repeating information once instead of for every single div.
+
+<div ng-app="myApp" ng-controller="myController">
+  <div ng-repeat="stuff in stuffs">
+<my-directive title = "{{stuff}}">
+  Stuff name is :
+</my-directive>
+</div>
+</div>
+
+not sure about another example..
+
 ```
 
 ## Question 10
@@ -159,7 +155,7 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
-
+I like option B. I think its easier to see the organization and how the URL is going to look, it makes more sense.
 > ...
 
 
@@ -212,4 +208,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
