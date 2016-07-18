@@ -14,6 +14,7 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
+  angular.module("Blogpost",["ui.router"]);
 
 ```
 
@@ -30,7 +31,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[X] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -41,11 +42,12 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 ```html
 <button ng-click="create()">Click</button>
 <button data-ng-click="create()">Click</button>
+
 ```
 
 **Your answer:**
 
-> ...
+> ...data-ng-click is for html validation
 
 ## Question 4
 
@@ -53,7 +55,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> ...A, it is at the highest level in the document.
 
 ### A:
 ```html
@@ -106,7 +108,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +118,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> ...An IIFE is a function that is ran has soon as it is defined.
 
 ## Question 7
 
@@ -124,7 +126,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> ...The ui-sref is used to create a link to a state
 
 ## Question 8
 
@@ -143,6 +145,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 /*6*/   else if(i % 5 == 0) console.log("Buzz");
 /*7*/   else console.log(i);
 /*8*/ }
+ran this code in the console and no error was thrown....?
 ```
 
 ## Question 9
@@ -151,6 +154,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
+{{custom directive}}
+<div custom directive = "name">
 
 ```
 
@@ -160,7 +165,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> ..B , seems to be the most organized.
 
 
 ### A:
