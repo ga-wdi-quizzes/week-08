@@ -17,7 +17,7 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 (function(){
   angular
-    .module("BlofPost", // the main app
+    .module("BlogPost", // the main app
     [ // And it's dependencies
       "ui.router",
     ]
@@ -137,7 +137,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> It's a router, used to link a path to a state. For instance, an online bookstore (as if such a thing would ever catch on) might have /home go to a splaah page, /books go to a listing of all the books they have on sale, and /books/# go to the detail pasges of a specific book, perhaps "Ethel the Aardvark Goes Full-Stack Developing".
+> It's a router, used to link a path to a state. For instance, an online bookstore (as if such a thing would ever catch on) might have /home go to a splaah page, /books go to a listing of all the books they have on sale, and /books/# go to the detail pages of a specific book, perhaps "Ethel the Aardvark Goes Full-Stack Developing".
 
 ## Question 8
 
@@ -166,7 +166,10 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+As a class:
+<span class="my-directive: expression;"></span>
+As an element:
+<my-directive></my-directive>
 ```
 
 ## Question 10
