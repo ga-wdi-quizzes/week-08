@@ -15,6 +15,14 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 **Your answer:**
 ```js
 
+(function(){
+  angular
+    .module("BlogPost", // the main app
+    [ // And it's dependencies
+      "ui.router",
+    ]
+  )
+})
 ```
 
 ## Question 2
@@ -30,7 +38,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[x] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -45,15 +53,20 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> They are functionally equivalent. However, only data-ng-click will pass the strictest HTML compliance tests. 
 
 ## Question 4
 
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 **Your answer:**
+```
+A. ng-app specifies the root element of the application. Only A puts the root element where it contains the data-ui-sref. It's a bit like saying ng-app is in Washington, DC, and data-ui-sref is in Northwest. 
+B puts ng-app in head, but data-ui-sref in body. That's a little like saying ng-app is in Washington, but data-ui-sref is in Arlington. 
+C puts them in different elements in the body. Maybe ng-app is in Ballston, and data-ui-sref is in Clarendon. In neither B nor C does data-ui-sref "live in" ng-app.
+```
+> 
 
-> ...
 
 ### A:
 ```html
@@ -106,7 +119,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[x] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +129,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> An IIFE is an Immediately Invoked Function Expression. It's a function that runs as soon as it's invoked, and then "disappears". THis keeps variables out of the global namespace, avoiding collisions when deployed to a server. 
 
 ## Question 7
 
@@ -124,7 +137,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> It's a router, used to link a path to a state. For instance, an online bookstore (as if such a thing would ever catch on) might have /home go to a splaah page, /books go to a listing of all the books they have on sale, and /books/# go to the detail pages of a specific book, perhaps "Ethel the Aardvark Goes Full-Stack Developing".
 
 ## Question 8
 
@@ -133,6 +146,8 @@ One of the lines of code in the following snippet will throw an error. Which one
 **Your answer:**
 
 > ...
+Line 3 (the start of the for loop) because line 1 specifies use strict and we do not previously declare i. I suppose you could line 1 causes the error, since it is actually what "puts the policy in place" that causes the error to be thrown.
+
 
 ```js
 /*1*/ "use strict";
@@ -151,7 +166,10 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+As a class:
+<span class="my-directive: expression;"></span>
+As an element:
+<my-directive></my-directive>
 ```
 
 ## Question 10
@@ -160,7 +178,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> B is the "most correct" choice, because it practices separation of concerns. The app is concerned with artists and sopngs, thus its code should be separated on that basis. A splits it into controllers, directives amd views, and C splits it into HTML and JS (plus further sorting.) Readablity and maintainablity is a key reason its better; at just one glance of the top level directory structure, someone who knows nothing else about the code knows this is a music related app, and which files handle artists and songs. The other two structures top levels just say "it's a JS app."
 
 
 ### A:
@@ -212,4 +230,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
