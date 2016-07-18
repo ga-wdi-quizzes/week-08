@@ -60,11 +60,13 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 **Your answer:**
-
-> 
+```
 A. ng-app specifies the root element of the application. Only A puts the root element where it contains the data-ui-sref. It's a bit like saying ng-app is in Washington, DC, and data-ui-sref is in Northwest. 
 B puts ng-app in head, but data-ui-sref in body. That's a little like saying ng-app is in Washington, but data-ui-sref is in Arlington. 
 C puts them in different elements in the body. Maybe ng-app is in Ballston, and data-ui-sref is in Clarendon. In neither B nor C does data-ui-sref "live in" ng-app.
+```
+> 
+
 
 ### A:
 ```html
@@ -127,7 +129,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> An IIFE is an Immediately Invoked Function Expression. It's a function that runs as soon as it's invoked, and then "disappears". THis keeps variables out of the global namespace, avoiding collisions when deployed to a server. 
 
 ## Question 7
 
