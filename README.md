@@ -137,7 +137,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> It's a router, used to link a path to a state. For instance, an online bookstore (as if such a thing would ever catch on) might have /home go to a splaah page, /books go to a listing of all the books they have on sale, and /books/# go to the detail pasges of a specific book, perhaps "Ethel the Aardvark Goes Full-Stack Developing".
 
 ## Question 8
 
