@@ -15,6 +15,20 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 **Your answer:**
 ```js
 
+"use strict";
+
+  (function(){
+  angular
+    .module("BlogPost", [
+      "ui.router",
+      SomethingHappens
+    ])
+
+  function SomethingHappens(){
+    console.log("stuff")
+  }
+}())
+
 ```
 
 ## Question 2
@@ -30,7 +44,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[X] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -44,7 +58,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 ```
 
 **Your answer:**
-
+functionally, none both lines of code will still work. 'data' in front of any attribute tells html validators you know the attribute isn't standard html, it's not a typo, and to ignore it in validations.
 > ...
 
 ## Question 4
@@ -52,7 +66,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 **Your answer:**
-
+A; initiates (phrase?) the use of the module throughout the code enclosed between the element where ng-app is added and where it is closed; in this case since it's in the html tag, controllers are available throughout the html document.
 > ...
 
 ### A:
@@ -69,10 +83,10 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 </html>
 ```
 
-### B:
-```html
+### B: This line won't work since ng-app ends with /head
+```html  
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -83,10 +97,10 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 </html>
 ```
 
-### C:
+### C: this line also wont work since ng-app is used in a div separate from the h1 elements
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +120,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -115,7 +129,7 @@ Which one of the following concepts does this best illustrate?
 What is an IIFE, and why might you use it?
 
 **Your answer:**
-
+immediately invoked function; it's the weird function around modules and controllers actually doing things in the code. Prevents angular functions from being global and available on all pages which A) could cause problems if other functions have the same name and B) slows down pages since everything is loading
 > ...
 
 ## Question 7
@@ -123,7 +137,7 @@ What is an IIFE, and why might you use it?
 What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
-
+links to a controller based on the routing indicated in the state provider module in the main app.js file
 > ...
 
 ## Question 8
@@ -131,7 +145,7 @@ What is the `ui-sref` directive, and how is it used?
 One of the lines of code in the following snippet will throw an error. Which one is it, and why?
 
 **Your answer:**
-
+line 2; i is not defined outside the for loop
 > ...
 
 ```js
@@ -139,9 +153,9 @@ One of the lines of code in the following snippet will throw an error. Which one
 /*2*/ var max = 100;
 /*3*/ for(i = 1; i < max; i++){
 /*4*/   if(i % 15 == 0) console.log("FizzBuzz");
-/*5*/   else if(i % 3 == 0) console.log("Fizz");
-/*6*/   else if(i % 5 == 0) console.log("Buzz");
-/*7*/   else console.log(i);
+/*5*/     else if(i % 3 == 0) console.log("Fizz");
+/*6*/     else if(i % 5 == 0) console.log("Buzz");
+/*7*/     else console.log(i);
 /*8*/ }
 ```
 
@@ -152,6 +166,10 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 **Your answer:**
 ```html
 
+<my-directive></my-directive>
+<div ui-sref="my directive"> </div>
+
+
 ```
 
 ## Question 10
@@ -159,7 +177,7 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
 
 **Your answer:**
-
+I think B, but only because that's how our files have been organized. My guess for B is because it keeps the data as modularized as possible; an artist module will need to add, show, hide etc controllers and html displayed to be considered functional. But an artist model doesn't necessarily need songs to work well.
 > ...
 
 
@@ -212,4 +230,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
