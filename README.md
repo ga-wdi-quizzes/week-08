@@ -2,39 +2,23 @@
 
 ## Instructions
 
-1. Fork this repo.
-- Clone your fork.
-- Fill in your answers by writing the appropriate area, or placing an 'x' in the square brackets for multiple-choice questions.
-- Add/Commit/Push your changes to Github.
-- Open a pull request.
+1. Fork this repo
+- Clone your fork
+- Fill in your answers by writing the appropriate area, or placing an 'x' in the square brackets for multiple-choice questions
+- Add/Commit/Push your changes to Github
+- Open a pull request
 
-## Question 1
+## Part I: Angular
 
-Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a dependency. Use Angular code style conventions.
+### Question 1
 
-**Your answer:**
-```js
-
-```
-
-## Question 2
-
-Given a custom directive whose `link` function contains the line:
+Instantiate a new Angular module called `blog` that takes `ui.router` as a dependency.
 
 ```js
-scope.status = "Click";
+// Your answer goes here...
 ```
 
-Which *one* of the following buttons would *not* be displayed?
-
-```html
-[ ] A: <button data-ng-if="status">Click</button>
-[ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
-[ ] D: <button>{{status}}</button>
-```
-
-## Question 3
+### Question 2
 
 One button below has an `ng-click` attribute; the other has `data-ng-click` instead. What difference does it make?
 
@@ -43,17 +27,17 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 <button data-ng-click="create()">Click</button>
 ```
 
-**Your answer:**
+```text
+Your answer goes here...
+```
 
-> ...
-
-## Question 4
+### Question 3
 
 Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
 
-**Your answer:**
-
-> ...
+```text
+Your answer goes here...
+```
 
 ### A:
 ```html
@@ -72,7 +56,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +70,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -97,7 +81,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 </html>
 ```
 
-## Question 5
+### Question 4
 
 Imagine an app in which a change to the view updates the model without a page refresh, and a change to the model updates the view without a page refresh.
 
@@ -110,106 +94,39 @@ Which one of the following concepts does this best illustrate?
 [ ] D: Separation of concerns
 ```
 
-## Question 6
-
-What is an IIFE, and why might you use it?
-
-**Your answer:**
-
-> ...
-
-## Question 7
+### Question 5
 
 What is the `ui-sref` directive, and how is it used?
 
-**Your answer:**
+```text
+Your answer goes here...
+```
 
-> ...
+## Part II: APIs
 
-## Question 8
+### Question 1
 
-One of the lines of code in the following snippet will throw an error. Which one is it, and why?
+Below is an `index` controller action that maps to a `Post` model in a Rails application. How would you modify it so that it can respond with a list of posts in either HTML or JSON form, depending on the incoming HTTP request?
 
-**Your answer:**
+```rb
+class PostsController < ApplicationController
+  def index
+    @posts = Post.all
+  end
+end
+```
 
-> ...
+```rb
+# Your answer goes here...
+```
+
+### Question 2
+
+Let's say the posts in the previous question are available when you visit `http://localhost:3000`. How could you do the following using jQuery...
+  1. Retrieve all the posts in JSON form
+  2. If Step 1 is successful, print the resulting JSON to the console
+  3. If Step 1 is unsuccessful, print an error message to the console
 
 ```js
-/*1*/ "use strict";
-/*2*/ var max = 100;
-/*3*/ for(i = 1; i < max; i++){
-/*4*/   if(i % 15 == 0) console.log("FizzBuzz");
-/*5*/   else if(i % 3 == 0) console.log("Fizz");
-/*6*/   else if(i % 5 == 0) console.log("Buzz");
-/*7*/   else console.log(i);
-/*8*/ }
+// Your answer goes here...
 ```
-
-## Question 9
-
-Custom directives can be embedded in HTML four different ways. Demonstrate **two** of these four with a directive called `my-directive`. (Hint: "MACE")
-
-**Your answer:**
-```html
-
-```
-
-## Question 10
-
-Of the three following options, which is the most "correct" way of organizing the files that make up an Angular app? Why is this option considered "better" than the other two?
-
-**Your answer:**
-
-> ...
-
-
-### A:
-```
-/js
-  app.js
-  controllers/
-    artist_index.js
-    artist_show.js
-  directives/
-    artist_form.js
-    song_form.js
-  views/
-    artist_index.html
-    artist_show.html
-    artist_form.html
-    song_form.html
-```
-
-### B:
-```
-/js
-  app.js
-  artists/
-    index.controller.js
-    index.html
-    show.controller.js
-    show.html
-    form.directive.js
-    form.html
-  songs/
-    form.html
-    form.directive.html
-```
-
-### C:
-```
-/js
-  app.js
-  controllers/
-    artists_controller.js
-  directives/
-    songs_directive.js
-/html
-  artists/
-    index.html
-    show.html
-    form.html
-  songs/
-    form.html
-```
-
