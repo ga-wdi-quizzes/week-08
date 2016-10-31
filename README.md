@@ -107,7 +107,7 @@ Your answer goes here...
 
 ## Part II: APIs
 
-### Question 1
+### Question 6
 
 Below is an `index` controller action that maps to a `Post` model in a Rails application. How would you modify it so that it can respond with a list of posts in either HTML or JSON form, depending on the incoming HTTP request?
 
@@ -123,12 +123,24 @@ end
 # Your answer goes here...
 ```
 
-### Question 2
+### Question 7
 
-Let's say the posts in the previous question are available when you visit `http://localhost:3000`. How could you do the following using jQuery...
+Let's say the Posts in the previous question are available when you visit `http://localhost:3000`. In a front-end application, how could you do the following using jQuery...
   1. Retrieve all the posts in JSON form
   2. If Step 1 is successful, print the resulting JSON to the console
   3. If Step 1 is unsuccessful, print an error message to the console
+
+```js
+// Your answer goes here...
+```
+
+### Question 8
+
+Using the same front-end application and Rails API from the previous question, how would you use jQuery to create a Post through the API? You can assume the following...
+* The API is RESTful
+* Each Post has `title` and `body` attributes, both of which are strings
+
+If the Post creation is successful, the new Post should be printed to the browser console. Otherwise, an error message should be printed to the console.
 
 ```js
 // Your answer goes here...
