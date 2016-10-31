@@ -33,13 +33,14 @@ Your answer goes here...
 
 ### Question 3
 
-Which of the following demonstrates the best usage of `ng-app`? **Explain your answer.**
+Which of the three following options demonstrates the best usage of `ng-app`? **Explain your answer.**
 
 ```text
 Your answer goes here...
 ```
 
-### A:
+#### A
+
 ```html
 <!DOCTYPE html>
 <html data-ng-app="myapp">
@@ -53,7 +54,8 @@ Your answer goes here...
 </html>
 ```
 
-### B:
+#### B
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -67,7 +69,8 @@ Your answer goes here...
 </html>
 ```
 
-### C:
+#### C
+
 ```html
 <!DOCTYPE html>
 <html>
