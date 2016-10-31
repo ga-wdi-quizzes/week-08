@@ -138,6 +138,7 @@ Let's say the Posts in the previous question are available when you visit `http:
 
 Using the same front-end application and Rails API from the previous question, how would you use jQuery to create a Post through the API? You can assume the following...
 * The API is RESTful
+* The `PostsController` contains a strong params method that is used when creating an instance of the `Post` model
 * Each Post has `title` and `body` attributes, both of which are strings
 
 If the Post creation is successful, the new Post should be printed to the browser console. Otherwise, an error message should be printed to the console.
