@@ -23,8 +23,8 @@ Instantiate a new Angular module called `blog` that takes `ui.router` as a depen
 One button below has an `ng-click` attribute; the other has `data-ng-click` instead. What difference does it make?
 
 ```html
-<button ng-click="create()">Click</button>
-<button data-ng-click="create()">Click</button>
+<button ng-click="vm.create()">Click</button>
+<button data-ng-click="vm.create()">Click</button>
 ```
 
 ```text
